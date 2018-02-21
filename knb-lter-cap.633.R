@@ -95,16 +95,25 @@ primary_productivity <- primary_productivity %>%
     date = as.POSIXct(date, format = "%m/%d/%y"),
     date = format(date, "%Y-%m-%d"),
     transect = recodeTransect(transect),
-    species = as.factor(species)
+    species = as.factor(species),
+    plant_id = seq_along(date),
+    data.book.ID = as.character(data.book.ID),
+    quadrat = as.character(quadrat)
   )
 
 # typha
 
 typha_leaves <- primary_productivity %>% 
-  select(date:species, data.book.ID, Notes, starts_with("leaf")) %>% 
+  select(date:species, plant_id, data.book.ID, Notes, starts_with("leaf")) %>% 
   gather(key = "leaf_num", value = "leaf_length", starts_with("leaf")) %>% 
   filter(!is.na(leaf_length)) %>% 
-  arrange(date, transect, quadrat, species, leaf_num)
+  mutate(
+    plant_id = as.character(plant_id),
+    leaf_length = as.numeric(leaf_length)
+  ) %>% 
+  arrange(plant_id) %>% 
+  as.data.frame
+
 
 writeAttributes(typha_leaves) # write data frame attributes to a csv in current dir to edit metadata
 
@@ -120,8 +129,10 @@ typha_leaves_DT <- createDTFF(dfname = typha_leaves,
 # plant attributes
 
 plant_attributes <- primary_productivity %>% 
-  select(-X1, -starts_with("leaf")) %>% 
-  arrange(date, transect, quadrat, species)
+  select(-X1, -starts_with("leaf")) %>%
+  arrange(plant_id) %>% 
+  mutate(plant_id = as.character(plant_id)) %>% 
+  select(date:species, plant_id, cdb:Notes)
 
 writeAttributes(plant_attributes) # write data frame attributes to a csv in current dir to edit metadata
 
@@ -143,15 +154,15 @@ transpiration[transpiration == ''] <- NA
 
 transpiration <- transpiration %>%
   mutate(
-    date = as.POSIXct(date, format = "%m/%d/%y"),
-    date = format(date, "%Y-%m-%d"),
+    date = as.POSIXct(paste(date, time), format = "%m/%d/%y %H:%M:%S"),
     transect = case_when(
       transect == 'boardwalk' ~ 'boardwalk',
       transect != 'boardwalk' ~ recodeTransect(transect)
     ),
     plant_spp = as.factor(plant_spp)
   ) %>% 
-  rename(species = plant_spp)
+  rename(species = plant_spp) %>% 
+  select(-time)
 
 plant_spp = replace(plant_spp, plant_spp == "stab", "s_tabernaemontani"),
 plant_spp = replace(plant_spp, plant_spp == "smar", "s_maritimus"),

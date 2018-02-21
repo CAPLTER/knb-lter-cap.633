@@ -1,0 +1,10 @@
+attributeName,formatString,unit,numberType,definition,attributeDefinition,columnClasses,minimum,maximum,missingValueCode,missingValueCodeExplanation
+date,YYYY-MM-DD,,,,date of observation,Date,,,,
+transect,,,,transect ID,transect ID,character,,,,
+quadrat,,,natural,location of quadrat along transect,location of quadrat along transect,character,,,,
+species,,,,,plant species,factor,,,,
+plant_id,,,,plant id (for linking to plant attribute data),plant id (for linking to plant attribute data),character,,,,
+data.book.ID,,,natural,field data book ID,field data book ID,character,,,NA,missing value
+Notes,,,,notes,notes,character,,,NA,missing value
+leaf_num,,,,leaf ID,leaf ID,character,,,,
+leaf_length,,centimeter,,length of individual plant leaf,length of individual plant leaf,numeric,-175,3259,,
