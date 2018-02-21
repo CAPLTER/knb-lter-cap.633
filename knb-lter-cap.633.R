@@ -16,7 +16,7 @@ library(tidyverse)
 library(EML)
 library(aws.s3)
 # library(RPostgreSQL)
-# library(RMySQL)
+library(RMySQL)
 # library(tools)
 # library(readxl)
 # library(capeml)
@@ -54,7 +54,7 @@ prod <- mysql_prod
 
 projectid <- 633
 packageIdent <- 'knb-lter-cap.633.2'
-pubDate <- '2018-02-20'
+pubDate <- '2018-02-22'
 
 
 # data processing ---------------------------------------------------------
@@ -98,7 +98,8 @@ primary_productivity <- primary_productivity %>%
     species = as.factor(species),
     plant_id = seq_along(date),
     data.book.ID = as.character(data.book.ID),
-    quadrat = as.character(quadrat)
+    quadrat = as.character(quadrat),
+    species = replace(species, species == "s_cal", "s_californicus")
   )
 
 # typha
@@ -115,14 +116,14 @@ typha_leaves <- primary_productivity %>%
   as.data.frame
 
 
-writeAttributes(typha_leaves) # write data frame attributes to a csv in current dir to edit metadata
+# writeAttributes(typha_leaves) # write data frame attributes to a csv in current dir to edit metadata
 
 typha_leaves_desc <- "Tres Rios: indices of primary productivity. Measurements of lenghts of Typha spp. leaves located within study transects at the Tres Rios wetlands. These data are used as inputs into biomass models to calculate above-ground primary productivity."
 
-typha_leaves_factors <- factorsToFrame(typha_leaves)
+# typha_leaves_factors <- factorsToFrame(typha_leaves)
 
 typha_leaves_DT <- createDTFF(dfname = typha_leaves,
-                              factors = typha_leaves_factors,
+                              # factors = typha_leaves_factors,
                               description = typha_leaves_desc,
                               dateRangeField = 'date')
 
@@ -132,16 +133,17 @@ plant_attributes <- primary_productivity %>%
   select(-X1, -starts_with("leaf")) %>%
   arrange(plant_id) %>% 
   mutate(plant_id = as.character(plant_id)) %>% 
-  select(date:species, plant_id, cdb:Notes)
+  select(date:species, plant_id, cdb:Notes) %>% 
+  as.data.frame()
 
-writeAttributes(plant_attributes) # write data frame attributes to a csv in current dir to edit metadata
+# writeAttributes(plant_attributes) # write data frame attributes to a csv in current dir to edit metadata
 
 plant_attributes_desc <- "Tres Rios: indices of primary productivity. Measurements of various physiological characteristics of individual plants located within study transects at the Tres Rios wetlands. These data are used as inputs into biomass models to calculate above-ground primary productivity."
 
-plant_attributes_factors <- factorsToFrame(plant_attributes)
+# plant_attributes_factors <- factorsToFrame(plant_attributes)
 
 plant_attributes_DT <- createDTFF(dfname = plant_attributes,
-                                  factors = plant_attributes_factors,
+                                  # factors = plant_attributes_factors,
                                   description = plant_attributes_desc,
                                   dateRangeField = 'date')
 
@@ -154,36 +156,38 @@ transpiration[transpiration == ''] <- NA
 
 transpiration <- transpiration %>%
   mutate(
-    date = as.POSIXct(paste(date, time), format = "%m/%d/%y %H:%M:%S"),
+    date_time = as.POSIXct(paste(date, time), format = "%m/%d/%y %H:%M:%S"),
     transect = case_when(
       transect == 'boardwalk' ~ 'boardwalk',
       transect != 'boardwalk' ~ recodeTransect(transect)
     ),
+    obs_num = as.character(obs_num),
+    plant_spp = replace(plant_spp, plant_spp == "stab", "s_tabernaemontani"),
+    plant_spp = replace(plant_spp, plant_spp == "sac", "s_acutus"),
+    plant_spp = replace(plant_spp, plant_spp == "smar", "s_maritimus"),
+    plant_spp = replace(plant_spp, plant_spp == "sam", "s_americanus"),
+    plant_spp = replace(plant_spp, plant_spp == "scal", "s_californicus"),
+    plant_spp = replace(plant_spp, plant_spp == "sac/stab", "s_acutus_tabernaemontani"),
+    plant_spp = replace(plant_spp, plant_spp == "sacstab", "s_acutus_tabernaemontani"),
+    plant_spp = replace(plant_spp, plant_spp == "hyd", "h_umbellate"),
+    plant_spp = replace(plant_spp, plant_spp == "typ", "typha"),
+    plant_spp = replace(plant_spp, plant_spp == "hyb", "h_umbellate"),
     plant_spp = as.factor(plant_spp)
   ) %>% 
   rename(species = plant_spp) %>% 
-  select(-time)
+  select(date_time, obs_num:VpdA) %>% 
+  as.data.frame()
 
-plant_spp = replace(plant_spp, plant_spp == "stab", "s_tabernaemontani"),
-plant_spp = replace(plant_spp, plant_spp == "smar", "s_maritimus"),
-plant_spp = replace(plant_spp, plant_spp == "sam", "s_americanus"),
-plant_spp = replace(plant_spp, plant_spp == "scal", "s_californicus"),
-plant_spp = replace(plant_spp, plant_spp == "sac/stab", "s_acutus_OR_s_tabernaemontani"),
-plant_spp = replace(plant_spp, plant_spp == "hyd", ""),
-plant_spp = replace(plant_spp, plant_spp == "typ", ""),
-plant_spp = replace(plant_spp, plant_spp == "hyb", ""),
-
-
-writeAttributes(transpiration) # write data frame attributes to a csv in current dir to edit metadata
+# writeAttributes(transpiration) # write data frame attributes to a csv in current dir to edit metadata
 
 transpiration_desc <- "Tres Rios: transpiration. Measurements of leaf-level gas exchange and micro-climate taken using an infrared gas analyzer on individual plant leaves located within study transects at the Tres Rios wetlands. These instantaneous micro-climate and transpiration data are used as inputs into transpiration and evaporation models that scale these data and estimate whole-system atmospheric water losses."
 
-transpiration_factors <- factorsToFrame(transpiration)
+# transpiration_factors <- factorsToFrame(transpiration)
 
 transpiration_DT <- createDTFF(dfname = transpiration,
-                               factors = transpiration_factors,
+                               # factors = transpiration_factors,
                                description = transpiration_desc,
-                               dateRangeField = 'date')
+                               dateRangeField = 'date_time')
 
 
 # water quality -----------------------------------------------------------
@@ -197,21 +201,23 @@ water_quality <- water_quality %>%
     date = as.POSIXct(date, format = "%m/%d/%y"),
     date = format(date, "%Y-%m-%d"),
     transect = case_when(
-      transect != 'm_1_e|m_4_n|m_4_s' ~ recodeTransect(transect)
+      grepl("m", transect) ~ recodeTransect(transect),
+      transect != 'm_1_e|m_4_n|m_4_s' ~ transect
     ),
     location = as.factor(location)
   ) %>% 
-  select(-sample_id)
+  select(-sample_id, -doc_id) %>% 
+  as.data.frame()
 
 
-writeAttributes(water_quality) # write data frame attributes to a csv in current dir to edit metadata
+# writeAttributes(water_quality) # write data frame attributes to a csv in current dir to edit metadata
 
 water_quality_desc <- "Tres Rios: water_quality. Measurements of water quality taken in situ and from grab samples collected within study transects at the Tres Rios wetlands."
 
-water_quality_factors <- factorsToFrame(water_quality)
+# water_quality_factors <- factorsToFrame(water_quality) # FAILS - WHY?
 
 water_quality_DT <- createDTFF(dfname = water_quality,
-                               factors = water_quality_factors,
+                               # factors = water_quality_factors,
                                description = water_quality_desc,
                                dateRangeField = 'date')
 
@@ -226,9 +232,12 @@ abstract <- as(set_TextType("tr_abstract.md"), "abstract")
 
 # people ----
 
-# creators
+# creators 
+
+# there are two chris sanchez in the gios db so did a quickie fix here to use
+# his middle initial also, need to work on a more robust solution
 danChilders <- addCreator('d', 'childers')
-chrisSanchez <- addCreator('c', 'sanchez')
+chrisSanchez <- addCreator('christopher', 'sanchez', 'a')
 nichWeller <- addCreator('n', 'weller')
 
 creators <- c(as(danChilders, 'creator'),
@@ -236,7 +245,10 @@ creators <- c(as(danChilders, 'creator'),
               as(nichWeller, 'creator'))
 
 # metadata providers
-chrisSanchez <- addMetadataProvider('c', 'sanchez')
+
+# there are two chris sanchez in the gios db so did a quickie fix here to use
+# his middle initial also, need to work on a more robust solution
+chrisSanchez <- addMetadataProvider('c', 'sanchez', 'a')
 
 metadataProvider <-c(as(chrisSanchez, 'metadataProvider'))
 
@@ -287,26 +299,24 @@ keywordSet <-
 # methods and coverages ----
 methods <- set_methods("tr_methods.md")
 
-begindate <- min(
+begindate <- as.character(min(
   min(primary_productivity$date),
-  min(transpiration$date),
   min(water_quality$date)
-)
-enddate <- max(
+))
+enddate <- as.character(max(
   max(primary_productivity$date),
-  max(transpiration$date),
   max(water_quality$date)
-)
+))
 geographicDescription <- "CAP LTER study area"
 coverage <- set_coverage(begin = begindate,
                          end = enddate,
-                         sci_names = c('Typha latifolia',
-                                       'Typha domingensis',
-                                       'Schoenoplectus americanus',
-                                       'Schoenoplectus acutus',
-                                       'Schoenoplectus tabernaemontani',
-                                       'Schoenoplectus maritimus',
-                                       'Schoenoplectus californicus'),
+                         # sci_names = c('Typha latifolia',
+                         #               'Typha domingensis',
+                         #               'Schoenoplectus americanus',
+                         #               'Schoenoplectus acutus',
+                         #               'Schoenoplectus tabernaemontani',
+                         #               'Schoenoplectus maritimus',
+                         #               'Schoenoplectus californicus'),
                          geographicDescription = geographicDescription,
                          west = -111.949, east = -111.910,
                          north = +33.437, south = +33.430)
@@ -337,9 +347,8 @@ dataset <- new("dataset",
                distribution = metadata_dist,
                dataTable = c(typha_leaves_DT,
                              plant_attributes_DT,
-                             
-                             ))
-               # otherEntity = c(core_arthropod_locations)) # if other entity is relevant
+                             transpiration_DT,
+                             water_quality_DT))
 
 # ls(pattern= "_DT") # can help to pull out DTs
 
@@ -424,7 +433,10 @@ dataToAmz <- function(fileToUpload) {
 }
 
 # example
-# dataToAmz('~/Dropbox/development/knb-lter-cap.650.1/CAP 30m Landsat Series Submit/650_CAP_1985_0c95b18e82df5eb0302a46e5967bb1e1.zip')
+dataToAmz('633_plant_attributes_2447e109c864ccf90239df3491b40d89.csv')
+dataToAmz('633_transpiration_a9ea6051e4cb9bfb85e814957cd01d2e.csv')
+dataToAmz('633_typha_leaves_05b45f4cd92bc4e06dc40d412ed592c2.csv')
+dataToAmz('633_water_quality_ae9dd785106f49a1583db20cc13240b4.csv')
 
 
 # metadata file to S3
@@ -437,4 +449,4 @@ emlToAmz <- function(fileToUpload) {
 }
 
 # example
-# emlToAmz('~/localRepos/cap-data/cap-data-eml/knb-lter-cap.650.1.xml')
+emlToAmz('knb-lter-cap.633.2.xml')

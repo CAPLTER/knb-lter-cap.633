@@ -1,0 +1,13 @@
+attributeName,formatString,unit,numberType,definition,attributeDefinition,columnClasses,minimum,maximum,missingValueCode,missingValueCodeExplanation
+date,YYYY-MM-DD,,,,date of observation,Date,,,,
+transect,,,,transect ID,transect ID,character,,,NA,missing value
+quadrat,,,,location of quadrat along transect,location of quadrat along transect,character,,,NA,missing value
+species,,,,,plant species,factor,,,NA,missing value
+plant_id,,,,plant id (for linking to Typha leaves data),plant id (for linking to Typha leaves data),character,,,,
+cdb,,centimeter,real,,Culm diameter of plant stem taken at water surface,numeric,0,302,NA,missing value
+stem_height,,centimeter,whole,,Height of plant stem (Schoenoplectus spp. Only),numeric,0,1276,NA,missing value
+num_seed_stems,,number,whole,,Count of seed steams at plant tip (Schoenoplectus spp. Only),numeric,0,4163,NA,missing value
+pistillate_length,,centimeter,whole,,"Length of pistillate, if present (Typha spp. Only)",numeric,0,347,NA,missing value
+pistillate_width,,centimeter,whole,,"Width of pistillate, if present (Typha spp. Only)",numeric,0,202,NA,missing value
+data.book.ID,,,,field data book ID,field data book ID,character,,,NA,missing value
+Notes,,,,notes,notes,character,,,NA,missing value
