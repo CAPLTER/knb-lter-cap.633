@@ -13,7 +13,7 @@ cl_mgL,,milligramsPerLiter,real,,chloride (Cl),numeric,0.116,4720,NA,missing val
 po4_ugL,,microgramsPerLiter,real,,phosphate-phosphorus (PO4-P),numeric,0.0556,520,NA,missing value
 ph,,dimensionless,real,,pH,numeric,6.44,8.08,NA,missing value
 temperature_c,,celsius,real,,Water temperature,numeric,4.1,32.1,NA,missing value
-conductance_us,,microsiemenPerCentimeter,natural,,Conductance,numeric,958,6285,NA,missing value
-spec_cond_us,,microsiemenPerCentimeter,natural,,Specific conductance,numeric,21,4516,NA,missing value
+conductance_us,,microsiemens,natural,,Conductance,numeric,958,6285,NA,missing value
+spec_cond_us,,microsiemensPerCentimeter,natural,,Specific conductance,numeric,21,4516,NA,missing value
 o2_mgL,,milligramsPerLiter,real,,Oxygen concentration,numeric,0,91,NA,missing value
 o2_percent,,dimensionless,real,,percent dissolved oxygen saturation,numeric,0,149.4,NA,missing value

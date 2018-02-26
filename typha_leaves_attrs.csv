@@ -7,4 +7,4 @@ plant_id,,,,plant id (for linking to plant attribute data),plant id (for linking
 data.book.ID,,,natural,field data book ID,field data book ID,character,,,NA,missing value
 Notes,,,,notes,notes,character,,,NA,missing value
 leaf_num,,,,leaf ID,leaf ID,character,,,,
-leaf_length,,centimeter,,length of individual plant leaf,length of individual plant leaf,numeric,-175,3259,,
+leaf_length,,centimeter,whole,length of individual plant leaf,length of individual plant leaf,numeric,-175,3259,,

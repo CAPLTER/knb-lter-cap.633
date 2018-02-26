@@ -54,7 +54,7 @@ prod <- mysql_prod
 
 projectid <- 633
 packageIdent <- 'knb-lter-cap.633.2'
-pubDate <- '2018-02-22'
+pubDate <- '2018-02-26'
 
 
 # data processing ---------------------------------------------------------
@@ -368,22 +368,32 @@ custom_units <- rbind(
              parentSI = "molesPerMeterSquaredPerSecond",
              unitType = "arealAmountOfSubstanceConcentrationRate",
              multiplierToSI = "1",
-             description = ""),
+             description = "unknown"),
   data.frame(id = "micromolesPerMole",
              parentSI = "",
-             unitType = "",
-             multiplierToSI = "",
-             description = ""),
+             unitType = "unknown",
+             multiplierToSI = "unknown",
+             description = "unknown"),
   data.frame(id = "millimolesPerMeterSquarePerSecond",
              parentSI = "molesPerMeterSquaredPerSecond",
              unitType = "arealAmountOfSubstanceConcentrationRate",
-             multiplierToSI = "",
-             description = ""),
+             multiplierToSI = "unknown",
+             description = "unknown"),
   data.frame(id = "micromolesPerSecond",
              parentSI = "molePerSecond",
              unitType = "mole flow rate",
-             multiplierToSI = "",
-             description = "")
+             multiplierToSI = "unknown",
+             description = "unknown"),
+  data.frame(id = "microsiemens",
+             parentSI = "siemens",
+             unitType = "electrical conductance",
+             multiplierToSI = "1.0E-6",
+             description = "microsiemens is equivalent to 1.0E-6 siemens, the SI derived unit of electric conductance equal to inverse ohm"),
+  data.frame(id = "microsiemensPerCentimeter",
+             parentSI = "siemensPerMeter",
+             unitType = "electrical conductance per length",
+             multiplierToSI = "0.0001",
+             description = "derivative of the standard SI unit of electrical conductance (specific conductance)")
 )
 unitList <- set_unitList(custom_units)
 
