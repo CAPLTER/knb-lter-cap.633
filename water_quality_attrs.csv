@@ -1,19 +1,19 @@
-attributeName,formatString,unit,numberType,definition,attributeDefinition,columnClasses,minimum,maximum,missingValueCode,missingValueCodeExplanation
-date,YYYY-MM-DD,,,,date of observation,Date,,,,
-transect,,,,transect ID,transect ID,character,,,,
-location,,,,,Location where sample was taken within transect,factor,,,,
-tp_mgL,,milligramsPerLiter,real,,Total phosphorus concentration,numeric,1.558,5.44,NA,missing value
-tn_mgL,,milligramsPerLiter,real,,Total nitrogen concentration,numeric,0.5549,13.776,NA,missing value
-doc_mgL,,milligramsPerLiter,real,,Dissolved organic carbon concentration,numeric,5.203,77.41,NA,missing value
-tdn_mgL,,milligramsPerLiter,real,,Total dissolved nitrogen concentration,numeric,0.8269,9.963,NA,missing value
-no3_mgL,,milligramsPerLiter,real,,nitrate-nitrogen (NO3-N),numeric,-0.0581,8.3,NA,missing value
-no2_mgL,,milligramsPerLiter,real,,nitrite-nitrogen (NO2-N),numeric,-0.00464,4.05,NA,missing value
-nh4_mgL,,milligramsPerLiter,real,,ammonium-nitrogen (NH4-N),numeric,-0.000951,3.42,NA,missing value
-cl_mgL,,milligramsPerLiter,real,,chloride (Cl),numeric,0.116,4720,NA,missing value
-po4_ugL,,microgramsPerLiter,real,,phosphate-phosphorus (PO4-P),numeric,0.0556,520,NA,missing value
-ph,,dimensionless,real,,pH,numeric,6.44,8.08,NA,missing value
-temperature_c,,celsius,real,,Water temperature,numeric,4.1,32.1,NA,missing value
-conductance_us,,microsiemens,natural,,Conductance,numeric,958,6285,NA,missing value
-spec_cond_us,,microsiemensPerCentimeter,natural,,Specific conductance,numeric,21,4516,NA,missing value
-o2_mgL,,milligramsPerLiter,real,,Oxygen concentration,numeric,0,91,NA,missing value
-o2_percent,,dimensionless,real,,percent dissolved oxygen saturation,numeric,0,149.4,NA,missing value
+attributeName,formatString,unit,numberType,definition,attributeDefinition,columnClasses,minimum,maximum
+date,YYYY-MM-DD,,,,date of observation,Date,,
+transect,,,,transect ID,transect ID,character,,
+location,,,,,Location where sample was taken within transect,factor,,
+tp_mgL,,milligramsPerLiter,real,,Total phosphorus concentration,numeric,1.558,5.44
+tn_mgL,,milligramsPerLiter,real,,Total nitrogen concentration,numeric,0.5549,13.776
+doc_mgL,,milligramsPerLiter,real,,Dissolved organic carbon concentration,numeric,5.203,77.41
+tdn_mgL,,milligramsPerLiter,real,,Total dissolved nitrogen concentration,numeric,0.8269,9.963
+no3_mgL,,milligramsPerLiter,real,,nitrate-nitrogen (NO3-N),numeric,-0.113,8.3
+no2_mgL,,milligramsPerLiter,real,,nitrite-nitrogen (NO2-N),numeric,-0.0109,4.05
+nh4_mgL,,milligramsPerLiter,real,,ammonium-nitrogen (NH4-N),numeric,-0.0491,3.42
+cl_mgL,,milligramsPerLiter,real,,chloride (Cl),numeric,0.116,4720
+po4_ugL,,microgramsPerLiter,real,,phosphate-phosphorus (PO4-P),numeric,0.0556,520
+ph,,dimensionless,real,,pH,numeric,6.44,8.91
+temperature_c,,celsius,real,,Water temperature,numeric,4.1,32.1
+conductance_us,,microsiemens,natural,,Conductance,numeric,0.763,6285
+spec_cond_us,,microsiemensPerCentimeter,natural,,Specific conductance,numeric,0.97,10261
+o2_mgL,,milligramsPerLiter,real,,Oxygen concentration,numeric,0,91
+o2_percent,,dimensionless,real,,percent dissolved oxygen saturation,numeric,0,191

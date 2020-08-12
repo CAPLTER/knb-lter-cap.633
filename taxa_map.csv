@@ -1,0 +1,11 @@
+taxa_raw,taxa_trimmed,taxa_replacement,taxa_removed,taxa_clean,rank,authority,authority_id,score,difference
+Schoenoplectus acutus,,,,Schoenoplectus acutus,Species,ITIS,507785,0.988,
+Schoenoplectus americanus,,,,Schoenoplectus americanus,Species,ITIS,508141,0.988,
+Schoenoplectus californicus,,,,Schoenoplectus californicus,Species,ITIS,508142,0.988,
+Schoenoplectus maritimus,,,,Schoenoplectus maritimus,Species,ITIS,521093,0.988,
+Schoenoplectus tabernaemontani,,,,Schoenoplectus tabernaemontani,Species,ITIS,507797,0.988,
+Typha domingensis,,,,Typha domingensis,Species,ITIS,42327,0.988,
+Typha latifolia,,,,Typha latifolia,Species,ITIS,42326,0.988,
+Hydroctoyle umbellate,,,,Hydrocotyle umbellata,Species,ITIS,29514,0.75,
+Schoenoplectus acutus OR Schoenoplectus tabernaemontani,,,,Schoenoplectus acutus,Species,ITIS,507785,0.988,
+Typha spp.,,,,Typha,Genus,ITIS,42324,0.75,

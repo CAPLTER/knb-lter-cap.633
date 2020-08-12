@@ -1,0 +1,2171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="knb-lter-cap.633.3" scope="system" system="knb" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd">
+  <access authSystem="knb" order="allowFirst" scope="document">
+    <allow>
+      <principal>uid=CAP,o=LTER,dc=ecoinformatics,dc=org</principal>
+      <permission>all</permission>
+    </allow>
+    <allow>
+      <principal>public</principal>
+      <permission>read</permission>
+    </allow>
+  </access>
+  <dataset>
+    <title>Long-term monitoring and research of the ecology of the Tres Rios constructed treatment wetland, Phoenix, AZ, ongoing since 2011</title>
+    <creator>
+      <individualName>
+        <givenName>Dan</givenName>
+        <surName>Childers</surName>
+      </individualName>
+      <organizationName>Arizona State University</organizationName>
+      <electronicMailAddress>dan.childers@asu.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-3904-0803</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Dax</givenName>
+        <surName>Mackay</surName>
+      </individualName>
+      <organizationName>Arizona State University</organizationName>
+      <electronicMailAddress>Dax.Mackay@asu.edu</electronicMailAddress>
+    </creator>
+    <metadataProvider>
+      <individualName>
+        <givenName>Christopher</givenName>
+        <surName>Sanchez</surName>
+      </individualName>
+      <organizationName>Arizona State University</organizationName>
+      <electronicMailAddress>casanch9@asu.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-2155-0197</userId>
+    </metadataProvider>
+    <metadataProvider>
+      <individualName>
+        <givenName>Dax</givenName>
+        <surName>Mackay</surName>
+      </individualName>
+      <organizationName>Arizona State University</organizationName>
+      <electronicMailAddress>Dax.Mackay@asu.edu</electronicMailAddress>
+    </metadataProvider>
+    <associatedParty>
+      <individualName>
+        <givenName>Christopher</givenName>
+        <surName>Sanchez</surName>
+      </individualName>
+      <organizationName>Arizona State University</organizationName>
+      <electronicMailAddress>casanch9@asu.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-2155-0197</userId>
+      <role>former associate of project</role>
+    </associatedParty>
+    <associatedParty>
+      <individualName>
+        <givenName>Nicholas</givenName>
+        <surName>Weller</surName>
+      </individualName>
+      <organizationName>Arizona State University</organizationName>
+      <electronicMailAddress>nicholas.weller@asu.edu</electronicMailAddress>
+      <role>former associate of project</role>
+    </associatedParty>
+    <pubDate>2020-08-12</pubDate>
+    <abstract>
+      <markdown>
+# Project Description
+
+In order to better understand the water, nutrient and treatment dynamics of aridland constructed treatment wetlands, we have developed datasets tracking primary productivity (aboveground and belowground), nutrient and water budget dynamics, soils, and aquatic metabolism at the Tres Rios wetlands, operated by the City of Phoenix Water Services Department, since July 2011. The 3-cell Tres Rios Wetlands were completed in 2010 and are associated with the 91st Avenue Wastewater Treatment Plant, the largest in Phoenix. This project is focused on the largest of the three wetlands treatment cells which was the first to be planted and became operational in Summer 2010. The wetland cells are bounded by roads (the "shoreline"), and the system we study is 42 ha in size, approximately half of which is open water and half of which is fringing vegetated marsh. Water depth is relatively consistent across the marsh (approximately 25cm) and effluent inflow to the cell varies seasonally from 95,000 to over 270,000 m3 d-1. Measurements are taken along two gradients representing the two hydraulic pathways of the system: The whole-system, from inflow to outflow, within the vegetated marsh itself.
+
+# Abstract
+
+Constructed treatment wetlands (CTW) provide cost effective and ecosystem-service based solutions to the problem of urban wastewater treatment. They are a particularly attractive option for water reuse in arid cities, where water resources are scarce, and understanding CTW function in these environments is critical to facilitating sustainable water use practices. Although CTW are well established and studied in mesic climates, how they function in and respond to hot, arid climates is comparatively not well understood. Specifically, large atmospheric water losses via evaporation and plant transpiration comprise a much larger component of the whole-system water budget than in mesic climates. Additionally, given the primary role that emergent macrophytes play in nitrogen removal, the effects of plant community composition and primary productivity patterns on system performance in the context of aridland constructed treatment wetlands have not been extensively studied. Our goal is to develop a model of how these "working wetlands" perform in arid climates by developing and comparing nutrient and water budgets. At the Tres Rios constructed treatment wetland in Phoenix, AZ, USA, we measure atmospheric water losses via plant transpiration and open water evaporation as well as inorganic nitrogen fluxes at the whole system and the vegetated marsh scales. Total water losses via evaporative pathways peaked at 300,000 m3 per mo-1 (714 L H2O m-2 mo-1) in the hot summer months and represented more than 70% of the whole-system water budget over a 27 month time period. These evaporative losses are nearly an order or magnitude higher than rates observed in mesic systems. Peaks in above-ground biomass ranged from 1586¬±179 to 2666¬±164 gdw m-2, with Typha spp. accounting for up to two-thirds of total biomass. Overall, the vegetated marsh removed almost all of the inorganic N supplied to it, and large transpirative water losses were observed to move large volumes of replacement water into the marsh via a plant-mediated "biological tide." This process providing additional opportunities for soil microbes and emergent macrophytes to process target solutes, and potentially enhancing the treatment efficacy of the aridland Tres Rios constructed treatment wetland relative to more humid and mesic systems.
+</markdown>
+    </abstract>
+    <keywordSet>
+      <keyword keywordType="theme">wetlands</keyword>
+      <keyword keywordType="theme">biomass</keyword>
+      <keyword keywordType="theme">evaporation</keyword>
+      <keyword keywordType="theme">evapotranspiration</keyword>
+      <keyword keywordType="theme">primary productivity</keyword>
+      <keyword keywordType="theme">water quality</keyword>
+      <keyword keywordType="theme">nutrients</keyword>
+      <keyword keywordType="theme">nitrogen</keyword>
+      <keyword keywordType="theme">phosphorus</keyword>
+      <keyword keywordType="theme">gas flux</keyword>
+      <keyword keywordType="theme">transpiration</keyword>
+      <keywordThesaurus>LTER controlled vocabulary</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword keywordType="theme">primary production</keyword>
+      <keyword keywordType="theme">movement of organic matter</keyword>
+      <keyword keywordType="theme">movement of inorganic matter</keyword>
+      <keyword keywordType="theme">water and fluxes</keyword>
+      <keyword keywordType="theme">parks and rivers</keyword>
+      <keywordThesaurus>LTER core areas</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword keywordType="theme">tres rios</keyword>
+      <keyword keywordType="theme">treatment wetlands</keyword>
+      <keyword keywordType="theme">constructed wetlands</keyword>
+      <keywordThesaurus>Creator Defined Keyword Set</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword keywordType="theme">cap lter</keyword>
+      <keyword keywordType="theme">cap</keyword>
+      <keyword keywordType="theme">caplter</keyword>
+      <keyword keywordType="theme">central arizona phoenix long term ecological research</keyword>
+      <keyword keywordType="place">arizona</keyword>
+      <keyword keywordType="place">az</keyword>
+      <keyword keywordType="theme">arid land</keyword>
+      <keywordThesaurus>CAPLTER Keyword Set List</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>This data package is released to the "public domain" under Creative Commons CC0 1.0 "No Rights Reserved" (see: https://creativecommons.org/publicdomain/zero/1.0/). The consumer of these data ("Data User" herein) has an ethical obligation to cite it appropriately in any publication that results from its use. The Data User should realize that these data may be actively used by others for ongoing research and that coordination may be necessary to prevent duplicate publication. The Data User is urged to contact the authors of these data if any questions about methodology or results occur. Where appropriate, the Data User is encouraged to consider collaboration or coauthorship with the authors. The Data User should realize that misinterpretation of data may occur if used out of context of the original study. While substantial efforts are made to ensure the accuracy of data and associated documentation, complete accuracy of data sets cannot be guaranteed. All data are made available "as is". The Data User should be aware, however, that data are updated periodically and it is the responsibility of the Data User to check for new versions of the data. The data authors and the repository where these data were obtained shall not be liable for damages resulting from any use or misinterpretation of the data. Thank you.</intellectualRights>
+    <distribution>
+      <online>
+        <onlineDescription>CAPLTER Metadata URL</onlineDescription>
+        <url>https://sustainability.asu.edu/caplter/data/data-catalog/view/knb-lter-cap.633.3/xml/</url>
+      </online>
+    </distribution>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>CAP LTER study area</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-112.266838</westBoundingCoordinate>
+          <eastBoundingCoordinate>-112.261501</eastBoundingCoordinate>
+          <northBoundingCoordinate>33.398637</northBoundingCoordinate>
+          <southBoundingCoordinate>33.388571</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2011-07-01</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2020-07-22</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+      <taxonomicCoverage>
+        <taxonomicClassification>
+          <taxonRankName>kingdom</taxonRankName>
+          <taxonRankValue>Plantae</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>subkingdom</taxonRankName>
+            <taxonRankValue>Viridiplantae</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>infrakingdom</taxonRankName>
+              <taxonRankValue>Streptophyta</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>superdivision</taxonRankName>
+                <taxonRankValue>Embryophyta</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>division</taxonRankName>
+                  <taxonRankValue>Tracheophyta</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>subdivision</taxonRankName>
+                    <taxonRankValue>Spermatophytina</taxonRankValue>
+                    <taxonomicClassification>
+                      <taxonRankName>class</taxonRankName>
+                      <taxonRankValue>Magnoliopsida</taxonRankValue>
+                      <taxonomicClassification>
+                        <taxonRankName>superorder</taxonRankName>
+                        <taxonRankValue>Lilianae</taxonRankValue>
+                        <taxonomicClassification>
+                          <taxonRankName>order</taxonRankName>
+                          <taxonRankValue>Poales</taxonRankValue>
+                          <taxonomicClassification>
+                            <taxonRankName>family</taxonRankName>
+                            <taxonRankValue>Cyperaceae</taxonRankValue>
+                            <taxonomicClassification>
+                              <taxonRankName>genus</taxonRankName>
+                              <taxonRankValue>Schoenoplectus</taxonRankValue>
+                              <taxonomicClassification>
+                                <taxonRankName>species</taxonRankName>
+                                <taxonRankValue>Schoenoplectus acutus</taxonRankValue>
+                              </taxonomicClassification>
+                            </taxonomicClassification>
+                          </taxonomicClassification>
+                        </taxonomicClassification>
+                      </taxonomicClassification>
+                    </taxonomicClassification>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>kingdom</taxonRankName>
+          <taxonRankValue>Plantae</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>subkingdom</taxonRankName>
+            <taxonRankValue>Viridiplantae</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>infrakingdom</taxonRankName>
+              <taxonRankValue>Streptophyta</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>superdivision</taxonRankName>
+                <taxonRankValue>Embryophyta</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>division</taxonRankName>
+                  <taxonRankValue>Tracheophyta</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>subdivision</taxonRankName>
+                    <taxonRankValue>Spermatophytina</taxonRankValue>
+                    <taxonomicClassification>
+                      <taxonRankName>class</taxonRankName>
+                      <taxonRankValue>Magnoliopsida</taxonRankValue>
+                      <taxonomicClassification>
+                        <taxonRankName>superorder</taxonRankName>
+                        <taxonRankValue>Lilianae</taxonRankValue>
+                        <taxonomicClassification>
+                          <taxonRankName>order</taxonRankName>
+                          <taxonRankValue>Poales</taxonRankValue>
+                          <taxonomicClassification>
+                            <taxonRankName>family</taxonRankName>
+                            <taxonRankValue>Cyperaceae</taxonRankValue>
+                            <taxonomicClassification>
+                              <taxonRankName>genus</taxonRankName>
+                              <taxonRankValue>Schoenoplectus</taxonRankValue>
+                              <taxonomicClassification>
+                                <taxonRankName>species</taxonRankName>
+                                <taxonRankValue>Schoenoplectus americanus</taxonRankValue>
+                              </taxonomicClassification>
+                            </taxonomicClassification>
+                          </taxonomicClassification>
+                        </taxonomicClassification>
+                      </taxonomicClassification>
+                    </taxonomicClassification>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>kingdom</taxonRankName>
+          <taxonRankValue>Plantae</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>subkingdom</taxonRankName>
+            <taxonRankValue>Viridiplantae</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>infrakingdom</taxonRankName>
+              <taxonRankValue>Streptophyta</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>superdivision</taxonRankName>
+                <taxonRankValue>Embryophyta</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>division</taxonRankName>
+                  <taxonRankValue>Tracheophyta</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>subdivision</taxonRankName>
+                    <taxonRankValue>Spermatophytina</taxonRankValue>
+                    <taxonomicClassification>
+                      <taxonRankName>class</taxonRankName>
+                      <taxonRankValue>Magnoliopsida</taxonRankValue>
+                      <taxonomicClassification>
+                        <taxonRankName>superorder</taxonRankName>
+                        <taxonRankValue>Lilianae</taxonRankValue>
+                        <taxonomicClassification>
+                          <taxonRankName>order</taxonRankName>
+                          <taxonRankValue>Poales</taxonRankValue>
+                          <taxonomicClassification>
+                            <taxonRankName>family</taxonRankName>
+                            <taxonRankValue>Cyperaceae</taxonRankValue>
+                            <taxonomicClassification>
+                              <taxonRankName>genus</taxonRankName>
+                              <taxonRankValue>Schoenoplectus</taxonRankValue>
+                              <taxonomicClassification>
+                                <taxonRankName>species</taxonRankName>
+                                <taxonRankValue>Schoenoplectus californicus</taxonRankValue>
+                              </taxonomicClassification>
+                            </taxonomicClassification>
+                          </taxonomicClassification>
+                        </taxonomicClassification>
+                      </taxonomicClassification>
+                    </taxonomicClassification>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>species</taxonRankName>
+          <taxonRankValue>Schoenoplectus maritimus</taxonRankValue>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>kingdom</taxonRankName>
+          <taxonRankValue>Plantae</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>subkingdom</taxonRankName>
+            <taxonRankValue>Viridiplantae</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>infrakingdom</taxonRankName>
+              <taxonRankValue>Streptophyta</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>superdivision</taxonRankName>
+                <taxonRankValue>Embryophyta</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>division</taxonRankName>
+                  <taxonRankValue>Tracheophyta</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>subdivision</taxonRankName>
+                    <taxonRankValue>Spermatophytina</taxonRankValue>
+                    <taxonomicClassification>
+                      <taxonRankName>class</taxonRankName>
+                      <taxonRankValue>Magnoliopsida</taxonRankValue>
+                      <taxonomicClassification>
+                        <taxonRankName>superorder</taxonRankName>
+                        <taxonRankValue>Lilianae</taxonRankValue>
+                        <taxonomicClassification>
+                          <taxonRankName>order</taxonRankName>
+                          <taxonRankValue>Poales</taxonRankValue>
+                          <taxonomicClassification>
+                            <taxonRankName>family</taxonRankName>
+                            <taxonRankValue>Cyperaceae</taxonRankValue>
+                            <taxonomicClassification>
+                              <taxonRankName>genus</taxonRankName>
+                              <taxonRankValue>Schoenoplectus</taxonRankValue>
+                              <taxonomicClassification>
+                                <taxonRankName>species</taxonRankName>
+                                <taxonRankValue>Schoenoplectus tabernaemontani</taxonRankValue>
+                              </taxonomicClassification>
+                            </taxonomicClassification>
+                          </taxonomicClassification>
+                        </taxonomicClassification>
+                      </taxonomicClassification>
+                    </taxonomicClassification>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>kingdom</taxonRankName>
+          <taxonRankValue>Plantae</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>subkingdom</taxonRankName>
+            <taxonRankValue>Viridiplantae</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>infrakingdom</taxonRankName>
+              <taxonRankValue>Streptophyta</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>superdivision</taxonRankName>
+                <taxonRankValue>Embryophyta</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>division</taxonRankName>
+                  <taxonRankValue>Tracheophyta</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>subdivision</taxonRankName>
+                    <taxonRankValue>Spermatophytina</taxonRankValue>
+                    <taxonomicClassification>
+                      <taxonRankName>class</taxonRankName>
+                      <taxonRankValue>Magnoliopsida</taxonRankValue>
+                      <taxonomicClassification>
+                        <taxonRankName>superorder</taxonRankName>
+                        <taxonRankValue>Lilianae</taxonRankValue>
+                        <taxonomicClassification>
+                          <taxonRankName>order</taxonRankName>
+                          <taxonRankValue>Poales</taxonRankValue>
+                          <taxonomicClassification>
+                            <taxonRankName>family</taxonRankName>
+                            <taxonRankValue>Typhaceae</taxonRankValue>
+                            <taxonomicClassification>
+                              <taxonRankName>genus</taxonRankName>
+                              <taxonRankValue>Typha</taxonRankValue>
+                              <taxonomicClassification>
+                                <taxonRankName>species</taxonRankName>
+                                <taxonRankValue>Typha domingensis</taxonRankValue>
+                              </taxonomicClassification>
+                            </taxonomicClassification>
+                          </taxonomicClassification>
+                        </taxonomicClassification>
+                      </taxonomicClassification>
+                    </taxonomicClassification>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>kingdom</taxonRankName>
+          <taxonRankValue>Plantae</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>subkingdom</taxonRankName>
+            <taxonRankValue>Viridiplantae</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>infrakingdom</taxonRankName>
+              <taxonRankValue>Streptophyta</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>superdivision</taxonRankName>
+                <taxonRankValue>Embryophyta</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>division</taxonRankName>
+                  <taxonRankValue>Tracheophyta</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>subdivision</taxonRankName>
+                    <taxonRankValue>Spermatophytina</taxonRankValue>
+                    <taxonomicClassification>
+                      <taxonRankName>class</taxonRankName>
+                      <taxonRankValue>Magnoliopsida</taxonRankValue>
+                      <taxonomicClassification>
+                        <taxonRankName>superorder</taxonRankName>
+                        <taxonRankValue>Lilianae</taxonRankValue>
+                        <taxonomicClassification>
+                          <taxonRankName>order</taxonRankName>
+                          <taxonRankValue>Poales</taxonRankValue>
+                          <taxonomicClassification>
+                            <taxonRankName>family</taxonRankName>
+                            <taxonRankValue>Typhaceae</taxonRankValue>
+                            <taxonomicClassification>
+                              <taxonRankName>genus</taxonRankName>
+                              <taxonRankValue>Typha</taxonRankValue>
+                              <taxonomicClassification>
+                                <taxonRankName>species</taxonRankName>
+                                <taxonRankValue>Typha latifolia</taxonRankValue>
+                              </taxonomicClassification>
+                            </taxonomicClassification>
+                          </taxonomicClassification>
+                        </taxonomicClassification>
+                      </taxonomicClassification>
+                    </taxonomicClassification>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>kingdom</taxonRankName>
+          <taxonRankValue>Plantae</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>subkingdom</taxonRankName>
+            <taxonRankValue>Viridiplantae</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>infrakingdom</taxonRankName>
+              <taxonRankValue>Streptophyta</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>superdivision</taxonRankName>
+                <taxonRankValue>Embryophyta</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>division</taxonRankName>
+                  <taxonRankValue>Tracheophyta</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>subdivision</taxonRankName>
+                    <taxonRankValue>Spermatophytina</taxonRankValue>
+                    <taxonomicClassification>
+                      <taxonRankName>class</taxonRankName>
+                      <taxonRankValue>Magnoliopsida</taxonRankValue>
+                      <taxonomicClassification>
+                        <taxonRankName>superorder</taxonRankName>
+                        <taxonRankValue>Asteranae</taxonRankValue>
+                        <taxonomicClassification>
+                          <taxonRankName>order</taxonRankName>
+                          <taxonRankValue>Apiales</taxonRankValue>
+                          <taxonomicClassification>
+                            <taxonRankName>family</taxonRankName>
+                            <taxonRankValue>Araliaceae</taxonRankValue>
+                            <taxonomicClassification>
+                              <taxonRankName>genus</taxonRankName>
+                              <taxonRankValue>Hydrocotyle</taxonRankValue>
+                              <taxonomicClassification>
+                                <taxonRankName>species</taxonRankName>
+                                <taxonRankValue>Hydrocotyle umbellata</taxonRankValue>
+                              </taxonomicClassification>
+                            </taxonomicClassification>
+                          </taxonomicClassification>
+                        </taxonomicClassification>
+                      </taxonomicClassification>
+                    </taxonomicClassification>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>kingdom</taxonRankName>
+          <taxonRankValue>Plantae</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>subkingdom</taxonRankName>
+            <taxonRankValue>Viridiplantae</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>infrakingdom</taxonRankName>
+              <taxonRankValue>Streptophyta</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>superdivision</taxonRankName>
+                <taxonRankValue>Embryophyta</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>division</taxonRankName>
+                  <taxonRankValue>Tracheophyta</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>subdivision</taxonRankName>
+                    <taxonRankValue>Spermatophytina</taxonRankValue>
+                    <taxonomicClassification>
+                      <taxonRankName>class</taxonRankName>
+                      <taxonRankValue>Magnoliopsida</taxonRankValue>
+                      <taxonomicClassification>
+                        <taxonRankName>superorder</taxonRankName>
+                        <taxonRankValue>Lilianae</taxonRankValue>
+                        <taxonomicClassification>
+                          <taxonRankName>order</taxonRankName>
+                          <taxonRankValue>Poales</taxonRankValue>
+                          <taxonomicClassification>
+                            <taxonRankName>family</taxonRankName>
+                            <taxonRankValue>Cyperaceae</taxonRankValue>
+                            <taxonomicClassification>
+                              <taxonRankName>genus</taxonRankName>
+                              <taxonRankValue>Schoenoplectus</taxonRankValue>
+                              <taxonomicClassification>
+                                <taxonRankName>species</taxonRankName>
+                                <taxonRankValue>Schoenoplectus acutus</taxonRankValue>
+                              </taxonomicClassification>
+                            </taxonomicClassification>
+                          </taxonomicClassification>
+                        </taxonomicClassification>
+                      </taxonomicClassification>
+                    </taxonomicClassification>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+        <taxonomicClassification>
+          <taxonRankName>kingdom</taxonRankName>
+          <taxonRankValue>Plantae</taxonRankValue>
+          <taxonomicClassification>
+            <taxonRankName>subkingdom</taxonRankName>
+            <taxonRankValue>Viridiplantae</taxonRankValue>
+            <taxonomicClassification>
+              <taxonRankName>infrakingdom</taxonRankName>
+              <taxonRankValue>Streptophyta</taxonRankValue>
+              <taxonomicClassification>
+                <taxonRankName>superdivision</taxonRankName>
+                <taxonRankValue>Embryophyta</taxonRankValue>
+                <taxonomicClassification>
+                  <taxonRankName>division</taxonRankName>
+                  <taxonRankValue>Tracheophyta</taxonRankValue>
+                  <taxonomicClassification>
+                    <taxonRankName>subdivision</taxonRankName>
+                    <taxonRankValue>Spermatophytina</taxonRankValue>
+                    <taxonomicClassification>
+                      <taxonRankName>class</taxonRankName>
+                      <taxonRankValue>Magnoliopsida</taxonRankValue>
+                      <taxonomicClassification>
+                        <taxonRankName>superorder</taxonRankName>
+                        <taxonRankValue>Lilianae</taxonRankValue>
+                        <taxonomicClassification>
+                          <taxonRankName>order</taxonRankName>
+                          <taxonRankValue>Poales</taxonRankValue>
+                          <taxonomicClassification>
+                            <taxonRankName>family</taxonRankName>
+                            <taxonRankValue>Typhaceae</taxonRankValue>
+                            <taxonomicClassification>
+                              <taxonRankName>genus</taxonRankName>
+                              <taxonRankValue>Typha</taxonRankValue>
+                            </taxonomicClassification>
+                          </taxonomicClassification>
+                        </taxonomicClassification>
+                      </taxonomicClassification>
+                    </taxonomicClassification>
+                  </taxonomicClassification>
+                </taxonomicClassification>
+              </taxonomicClassification>
+            </taxonomicClassification>
+          </taxonomicClassification>
+        </taxonomicClassification>
+      </taxonomicCoverage>
+    </coverage>
+    <contact>
+      <organizationName>Central Arizona–Phoenix LTER</organizationName>
+      <positionName>Information Manager</positionName>
+      <address>
+        <deliveryPoint>Arizona State University</deliveryPoint>
+        <deliveryPoint>Global Institute of Sustainability</deliveryPoint>
+        <city>Tempe</city>
+        <administrativeArea>AZ</administrativeArea>
+        <postalCode>85287-5402</postalCode>
+        <country>USA</country>
+      </address>
+      <electronicMailAddress>caplter.data@asu.edu</electronicMailAddress>
+      <onlineUrl>https://sustainability.asu.edu/caplter/</onlineUrl>
+    </contact>
+    <publisher>
+      <organizationName>Central Arizona–Phoenix LTER</organizationName>
+      <address>
+        <deliveryPoint>Arizona State University</deliveryPoint>
+        <deliveryPoint>Global Institute of Sustainability</deliveryPoint>
+        <city>Tempe</city>
+        <administrativeArea>AZ</administrativeArea>
+        <postalCode>85287-5402</postalCode>
+        <country>USA</country>
+      </address>
+    </publisher>
+    <methods>
+      <methodStep>
+        <description>
+          <markdown>
+# Transpiration
+
+Leaf-specific transpiration rates were measured using a LICOR LI-6400 infrared gas analyzer bi-monthly along marsh transects that contained all species groups. Measurements were made on individual plant leaves at 50-cm intervals from the water surface to the top of the plant canopy. Where plants did not have leaves but only thick stems (Schoenoplectus spp.), we used custom-made extensions of the stock LI-6400 IRGA sampling chamber to ensure an airtight seal without damaging plant tissue. Gas flux data were collected on one transect at a time from sunrise until as late as possible. These data included measurements of leaf-specific transpiration rate (Tr mmol H m-2 sec -1), photosynthetically active radiation (PAR, μmol photons), relative humidity (%), and ambient air temperature (degrees celsius), all of which were captured using the IRGA's default sensors. While the IRGA reports transpiration data in units of leaf surface area, we expressed them in units of dry weight biomass by weighing 8-10 samples of different tissue samples from the IRGA's chamber and generating relationships between dry weight biomass and surface area for all plant species. 
+
+To scale the daily plant-specific transpiration measurements across space, IRGA measurements corrected for dry-weight biomass we to re combined with whole system live macrophyte biomass estimates as calculated by the bimonthly data collected along the 10 sampling transects (see biomass section for details). To scale the plant-specific measurements in time, micrometeorological data as collected by the IRGA at the time of transpiration sampling were regressed with simultaneous data from an on-site meteorological station operated by the City of Phoenix. In addition, as plant transpiration in Tres Rios is largely driven by temperature, photosynthetically active radiation, and humidity, we regressed plant transpiration rates against these variables to be able to predict transpiration using meteorological data. Combined with the IRGA-meteorological station regressions, these models allowed us to interpolate our plant-specific measurements through time, resulting in total transpiration losses for the whole system (m3/mo-1). See Sanchez et al. (2016; DOI: 10.1016/j.ecoleng.2016.01.002) for more details. 
+
+# Biomass
+
+We used a point intercept transect approach across 10 approximately 50m transects that were evenly distributed across the wetland cell from inflow to outflow. Every two months we measured live aboveground biomass in five 0.25m2 quadrats that were randomly distributed along each transect. In each quadrat, we measured plant culm and various plant characteristics (stem height, number of leaves, etc.) and converted these measurements to dry weight biomass for each plant using established phenometric biomass models (see Weller et al. 2016 (DOI: 10.1016/j.ecoleng.2015.05.044) for more detail). Plant weights in each quadrat were summed for each quadrat. These measurements were scaled to the whole-system by averaging quadrat-specific estimates across each transect, multiplying by 1/10th of the total vegetated area (21ha), and summing across all transects.
+
+# Water Quality
+
+We used a point intercept transect approach across 10 approximately 50m transects that were evenly distributed across the wetland cell from inflow to outflow. These are the same transects used for biomass measurements. Bimonthly triplicate surface water grab samples were collected at the whole-system inflow and outflow using acid-washed 1 L Nalgene bottles, while single grab samples were collected at the beginning and end of each transect. A Lachat QC 8000 Quickchem Flow Injection Analyzer (detection limit 0.85 μg NO3-N L-1 and 3.01 μg NH4- N L-1) was used to centrifuge and analyze unfiltered samples for inorganic nitrogen (NO3-, NO2-, and NH4+) and soluble reactive phosphorus (SRP, PO4-3). At the sample locations where grab samples were taken, a YSI Pro 2030 meter was used to measure conductance and temperature while a YSI Ecosense ph100 meter was used to measure pH. 
+</markdown>
+        </description>
+      </methodStep>
+    </methods>
+    <project>
+      <title>Central Arizona–Phoenix Long-Term Ecological Research Project</title>
+      <personnel>
+        <individualName>
+          <givenName>Daniel</givenName>
+          <surName>Childers</surName>
+        </individualName>
+        <organizationName>Arizona State University</organizationName>
+        <electronicMailAddress>dan.childers@asu.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0003-3904-0803</userId>
+        <role>Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Nancy</givenName>
+          <surName>Grimm</surName>
+        </individualName>
+        <organizationName>Arizona State University</organizationName>
+        <electronicMailAddress>nbgrimm@asu.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0001-9374-660X</userId>
+        <role>Co-principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Sharon</givenName>
+          <surName>Hall</surName>
+        </individualName>
+        <organizationName>Arizona State University</organizationName>
+        <electronicMailAddress>sharonjhall@asu.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0002-8859-6691</userId>
+        <role>Co-principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Billie</givenName>
+          <surName>Turner II</surName>
+        </individualName>
+        <organizationName>Arizona State University</organizationName>
+        <electronicMailAddress>Billie.L.Turner@asu.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0002-6507-521X</userId>
+        <role>Co-principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Abigail</givenName>
+          <surName>York</surName>
+        </individualName>
+        <organizationName>Arizona State University</organizationName>
+        <electronicMailAddress>Abigail.York@asu.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0002-2313-9262</userId>
+        <role>Co-principal Investigator</role>
+      </personnel>
+      <abstract>Phase IV of the Central Arizona-Phoenix LTER (CAP) continues to focus on the question: How do the ecosystem services provided by urban ecological infrastructure (UEI) affect human outcomes and behavior, and how do human actions affect patterns of urban ecosystem structure and function and, ultimately, urban sustainability and resilience? The overarching goal is to foster social-ecological urban research aimed at understanding these complex systems using a holistic, ecology of cities perspective while contributing to an ecology for cities that enhances urban sustainability and resilience. This goal is being met through four broad programmatic objectives: (1) use long-term observations and datasets to articulate and answer new questions requiring a long-term perspective; (2) develop and use predictive models and future-looking scenarios to help answer research questions; (3) employ existing urban ecological theory while articulating new theory; and (4) build transdisciplinary partnerships to foster resilience and enhance sustainability in urban ecosystems while educating urban dwellers of all ages and experiences. CAP IV research is organized around eight interdisciplinary questions and ten long-term datasets and experiments, and researchers are organized into eight Interdisciplinary Research Themes to pursue these long-term research questions.</abstract>
+      <funding>NSF Awards: CAP I: DEB-9714833, CAP II: DEB-0423704, CAP III: DEB-1026865, CAP IV: DEB-1832016</funding>
+      <award>
+        <funderName>National Science Foundation</funderName>
+        <funderIdentifier>https://ror.org/021nxhr62</funderIdentifier>
+        <awardNumber>1832016</awardNumber>
+        <title>LTER: CAP IV - Investigating urban ecology and sustainability through the lens of Urban Ecological Infrastructure</title>
+        <awardUrl>https://nsf.gov/awardsearch/showAward?AWD_ID=1832016&amp;HistoricalAwards=false</awardUrl>
+      </award>
+    </project>
+    <dataTable id="633_plant_attributes_d4550e6c0e389edb7956f5c773bb5aef.csv">
+      <entityName>633_plant_attributes_d4550e6c0e389edb7956f5c773bb5aef.csv</entityName>
+      <entityDescription>Tres Rios: indices of primary productivity. Measurements of various physiological characteristics of individual plants located within study transects at the Tres Rios wetlands. These data are used as inputs into biomass models to calculate above-ground primary productivity.</entityDescription>
+      <physical>
+        <objectName>633_plant_attributes_d4550e6c0e389edb7956f5c773bb5aef.csv</objectName>
+        <size unit="bytes">2215857</size>
+        <authentication method="MD5">d4550e6c0e389edb7956f5c773bb5aef</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://data.gios.asu.edu/datasets/cap/633_plant_attributes_d4550e6c0e389edb7956f5c773bb5aef.csv</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>date</attributeName>
+          <attributeDefinition>date of observation</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>transect</attributeName>
+          <attributeDefinition>transect ID</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>transect ID</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>quadrat</attributeName>
+          <attributeDefinition>location of quadrat along transect</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>location of quadrat along transect</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>species</attributeName>
+          <attributeDefinition>plant species</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>s_acutus</code>
+                    <definition>Schoenoplectus acutus</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>s_americanus</code>
+                    <definition>Schoenoplectus americanus</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>s_californicus</code>
+                    <definition>Schoenoplectus californicus</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>s_maritimus</code>
+                    <definition>Schoenoplectus maritimus</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>s_tabernaemontani</code>
+                    <definition>Schoenoplectus tabernaemontani</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>t_domingensis</code>
+                    <definition>Typha domingensis</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>t_latifolia</code>
+                    <definition>Typha latifolia</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>plant_id</attributeName>
+          <attributeDefinition>plant id (for linking to Typha leaves data)</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>plant id (for linking to Typha leaves data)</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>cdb</attributeName>
+          <attributeDefinition>Culm diameter of plant stem taken at water surface</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">7037</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>stem_height</attributeName>
+          <attributeDefinition>Height of plant stem (Schoenoplectus spp. Only)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">1276</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>num_seed_stems</attributeName>
+          <attributeDefinition>Count of seed steams at plant tip (Schoenoplectus spp. Only)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">208</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>pistillate_length</attributeName>
+          <attributeDefinition>Length of pistillate, if present (Typha spp. Only)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">347</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>pistillate_width</attributeName>
+          <attributeDefinition>Width of pistillate, if present (Typha spp. Only)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">202</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>data_book_ID</attributeName>
+          <attributeDefinition>field data book ID</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>field data book ID</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Notes</attributeName>
+          <attributeDefinition>notes</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>notes</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>30035</numberOfRecords>
+    </dataTable>
+    <dataTable id="633_transpiration_8955b945a0b49b40794cbd7b304343af.csv">
+      <entityName>633_transpiration_8955b945a0b49b40794cbd7b304343af.csv</entityName>
+      <entityDescription>Tres Rios: transpiration. Measurements of leaf-level gas exchange and micro-climate taken using an infrared gas analyzer on individual plant leaves located within study transects at the Tres Rios wetlands. These instantaneous micro-climate and transpiration data are used as inputs into transpiration and evaporation models that scale these data and estimate whole-system atmospheric water losses.</entityDescription>
+      <physical>
+        <objectName>633_transpiration_8955b945a0b49b40794cbd7b304343af.csv</objectName>
+        <size unit="bytes">713043</size>
+        <authentication method="MD5">8955b945a0b49b40794cbd7b304343af</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://data.gios.asu.edu/datasets/cap/633_transpiration_8955b945a0b49b40794cbd7b304343af.csv</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>date_time</attributeName>
+          <attributeDefinition>date and time of observation</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD hh:mm:ss</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>obs_num</attributeName>
+          <attributeDefinition>Sequential order in which samples were taken on a given day</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Sequential order in which samples were taken on a given day</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>transect</attributeName>
+          <attributeDefinition>transect ID</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>transect ID</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>species</attributeName>
+          <attributeDefinition>plant species</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>h_umbellate</code>
+                    <definition>Hydroctoyle umbellate</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>s_acutus</code>
+                    <definition>Schoenoplectus acutus</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>s_acutus_tabernaemontani</code>
+                    <definition>Schoenoplectus acutus OR Schoenoplectus tabernaemontani</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>s_americanus</code>
+                    <definition>Schoenoplectus americanus</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>s_californicus</code>
+                    <definition>Schoenoplectus californicus</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>s_maritimus</code>
+                    <definition>Schoenoplectus maritimus</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>s_tabernaemontani</code>
+                    <definition>Schoenoplectus tabernaemontani</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>typha</code>
+                    <definition>Typha spp.</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>section</attributeName>
+          <attributeDefinition>Vertical location along plant where measurement was taken. T = tip of leaf/stem; B = bottom of leaf/stem; integers represent total distance (cm) above water surface.</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Vertical location along plant where measurement was taken. T = tip of leaf/stem; B = bottom of leaf/stem; integers represent total distance (cm) above water surface.</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>photo</attributeName>
+          <attributeDefinition>Rate of photosynthesis</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>micromolesPerMeterSquaredPerSecond</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">-2867.231611</minimum>
+                  <maximum exclusive="false">501.067556</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>cond</attributeName>
+          <attributeDefinition>Conductance to H2O</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>molesPerMeterSquaredPerSecond</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">-1117.051062</minimum>
+                  <maximum exclusive="false">1637.942186</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>ci</attributeName>
+          <attributeDefinition>Intercellular CO2 concentration</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>micromolesPerMole</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">-233137.3812</minimum>
+                  <maximum exclusive="false">56294.53615</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>trmmol</attributeName>
+          <attributeDefinition>Transpiration rate</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>micromolesPerMole</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">-21.378685</minimum>
+                  <maximum exclusive="false">78.624949</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>VpdL</attributeName>
+          <attributeDefinition>Vapor pressure deficit based on Leaf temperature</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>kilopascal</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">-0.481791</minimum>
+                  <maximum exclusive="false">32.497367</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Area</attributeName>
+          <attributeDefinition>Area of leaf surface in IRGA chamber head</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>micromolesPerSecond</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.5</minimum>
+                  <maximum exclusive="false">33</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>stm_rat</attributeName>
+          <attributeDefinition>Stomatal ratio estimate</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">1</minimum>
+                  <maximum exclusive="false">1</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>BLCond</attributeName>
+          <attributeDefinition>Total boundary layer conductance for the life (includes stomatal ratio)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>molesPerMeterSquaredPerSecond</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">-9.016523</minimum>
+                  <maximum exclusive="false">5.255218</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Tair</attributeName>
+          <attributeDefinition>Temperature in the sample cell</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">8.959299</minimum>
+                  <maximum exclusive="false">48.149132</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Tleaf</attributeName>
+          <attributeDefinition>Temperature of the leaf thermocouple</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">1.523213</minimum>
+                  <maximum exclusive="false">74.192284</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>TBlk</attributeName>
+          <attributeDefinition>Temperature of the cooler block</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">9.02272</minimum>
+                  <maximum exclusive="false">48.254738</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>CO2R</attributeName>
+          <attributeDefinition>CO2 concentration inside the reference cell</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>micromolesPerMole</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">-0.132248</minimum>
+                  <maximum exclusive="false">2443.071533</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>CO2S</attributeName>
+          <attributeDefinition>CO2 concentration inside the sample cell</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>micromolesPerMole</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">-0.025031</minimum>
+                  <maximum exclusive="false">2416.128174</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>H2OR</attributeName>
+          <attributeDefinition>H2O concentration inside the reference cell</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>micromolesPerMole</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">3.129625</minimum>
+                  <maximum exclusive="false">41.07864</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>H2OS</attributeName>
+          <attributeDefinition>H2O concentration inside the sample cell</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>micromolesPerMole</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">3.792551</minimum>
+                  <maximum exclusive="false">79.275116</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>RH_R</attributeName>
+          <attributeDefinition>Relative humidity in the reference cell</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">17.006193</minimum>
+                  <maximum exclusive="false">69.980652</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>RH_S</attributeName>
+          <attributeDefinition>Relative humidity in the sample cell</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">19.365883</minimum>
+                  <maximum exclusive="false">86.52655</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>Flow</attributeName>
+          <attributeDefinition>Flow rate to the sample cell</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>micromolesPerSecond</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">399.149322</minimum>
+                  <maximum exclusive="false">501.006988</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>PARi</attributeName>
+          <attributeDefinition>Photosynthetically active radiation as measured by in-chamber sensor</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>micromolesPerMeterSquaredPerSecond</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">-1412.018311</minimum>
+                  <maximum exclusive="false">1937.74707</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>PARo</attributeName>
+          <attributeDefinition>Photosynthetically active radiation as measured by external sensor</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>micromolesPerMeterSquaredPerSecond</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">2050.601563</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>vp_kPa</attributeName>
+          <attributeDefinition>Average vapor pressure deficit</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>kilopascal</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.372634</minimum>
+                  <maximum exclusive="false">7.707693</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>VpdA</attributeName>
+          <attributeDefinition>Vapor pressure deficit based on air temperature</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>kilopascal</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">-0.045369</minimum>
+                  <maximum exclusive="false">15.939139</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>2380</numberOfRecords>
+    </dataTable>
+    <dataTable id="633_typha_leaves_a72198996370e736e77ae3bb972b1f4e.csv">
+      <entityName>633_typha_leaves_a72198996370e736e77ae3bb972b1f4e.csv</entityName>
+      <entityDescription>Tres Rios: indices of primary productivity. Measurements of lenghts of Typha spp. leaves located within study transects at the Tres Rios wetlands. These data are used as inputs into biomass models to calculate above-ground primary productivity</entityDescription>
+      <physical>
+        <objectName>633_typha_leaves_a72198996370e736e77ae3bb972b1f4e.csv</objectName>
+        <size unit="bytes">4729261</size>
+        <authentication method="MD5">a72198996370e736e77ae3bb972b1f4e</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://data.gios.asu.edu/datasets/cap/633_typha_leaves_a72198996370e736e77ae3bb972b1f4e.csv</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>date</attributeName>
+          <attributeDefinition>date of observation</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>transect</attributeName>
+          <attributeDefinition>transect ID</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>transect ID</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>quadrat</attributeName>
+          <attributeDefinition>location of quadrat along transect</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>location of quadrat along transect</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>species</attributeName>
+          <attributeDefinition>plant species</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>s_acutus</code>
+                    <definition>Schoenoplectus acutus</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>s_americanus</code>
+                    <definition>Schoenoplectus americanus</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>s_californicus</code>
+                    <definition>Schoenoplectus californicus</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>s_maritimus</code>
+                    <definition>Schoenoplectus maritimus</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>s_tabernaemontani</code>
+                    <definition>Schoenoplectus tabernaemontani</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>t_domingensis</code>
+                    <definition>Typha domingensis</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>t_latifolia</code>
+                    <definition>Typha latifolia</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>plant_id</attributeName>
+          <attributeDefinition>plant id (for linking to plant attribute data)</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>plant id (for linking to plant attribute data)</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>data_book_ID</attributeName>
+          <attributeDefinition>field data book ID</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>field data book ID</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>Notes</attributeName>
+          <attributeDefinition>notes</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>notes</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>leaf_num</attributeName>
+          <attributeDefinition>leaf ID</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>leaf ID</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>leaf_length</attributeName>
+          <attributeDefinition>length of individual plant leaf</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>centimeter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">-175</minimum>
+                  <maximum exclusive="false">127144</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>70525</numberOfRecords>
+    </dataTable>
+    <dataTable id="633_water_quality_0ae1b77ba27e994f9a4719f50d218b40.csv">
+      <entityName>633_water_quality_0ae1b77ba27e994f9a4719f50d218b40.csv</entityName>
+      <entityDescription>Tres Rios: water_quality. Measurements of water quality taken in situ and from grab samples collected within study transects at the Tres Rios wetlands.</entityDescription>
+      <physical>
+        <objectName>633_water_quality_0ae1b77ba27e994f9a4719f50d218b40.csv</objectName>
+        <size unit="bytes">68641</size>
+        <authentication method="MD5">0ae1b77ba27e994f9a4719f50d218b40</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://data.gios.asu.edu/datasets/cap/633_water_quality_0ae1b77ba27e994f9a4719f50d218b40.csv</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>date</attributeName>
+          <attributeDefinition>date of observation</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>transect</attributeName>
+          <attributeDefinition>transect ID</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>transect ID</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>location</attributeName>
+          <attributeDefinition>Location where sample was taken within transect</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>inflow</code>
+                    <definition>inflow</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>outflow</code>
+                    <definition>outflow</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>shore</code>
+                    <definition>shore</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>water</code>
+                    <definition>water</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>tp_mgL</attributeName>
+          <attributeDefinition>Total phosphorus concentration</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>milligramsPerLiter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">1.558</minimum>
+                  <maximum exclusive="false">5.44</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>tn_mgL</attributeName>
+          <attributeDefinition>Total nitrogen concentration</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>milligramsPerLiter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.5549</minimum>
+                  <maximum exclusive="false">13.776</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>doc_mgL</attributeName>
+          <attributeDefinition>Dissolved organic carbon concentration</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>milligramsPerLiter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">5.203</minimum>
+                  <maximum exclusive="false">77.41</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>tdn_mgL</attributeName>
+          <attributeDefinition>Total dissolved nitrogen concentration</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>milligramsPerLiter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.8269</minimum>
+                  <maximum exclusive="false">9.963</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>no3_mgL</attributeName>
+          <attributeDefinition>nitrate-nitrogen (NO3-N)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>milligramsPerLiter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">-0.113</minimum>
+                  <maximum exclusive="false">8.3</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>no2_mgL</attributeName>
+          <attributeDefinition>nitrite-nitrogen (NO2-N)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>milligramsPerLiter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">-0.0109</minimum>
+                  <maximum exclusive="false">4.05</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>nh4_mgL</attributeName>
+          <attributeDefinition>ammonium-nitrogen (NH4-N)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>milligramsPerLiter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">-0.0491</minimum>
+                  <maximum exclusive="false">3.42</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>cl_mgL</attributeName>
+          <attributeDefinition>chloride (Cl)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>milligramsPerLiter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.116</minimum>
+                  <maximum exclusive="false">4720</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>po4_ugL</attributeName>
+          <attributeDefinition>phosphate-phosphorus (PO4-P)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>microgramsPerLiter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.0556</minimum>
+                  <maximum exclusive="false">520</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>ph</attributeName>
+          <attributeDefinition>pH</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">6.44</minimum>
+                  <maximum exclusive="false">8.91</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>temperature_c</attributeName>
+          <attributeDefinition>Water temperature</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>celsius</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">4.1</minimum>
+                  <maximum exclusive="false">32.1</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>conductance_us</attributeName>
+          <attributeDefinition>Conductance</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>microsiemens</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.763</minimum>
+                  <maximum exclusive="false">6285</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>spec_cond_us</attributeName>
+          <attributeDefinition>Specific conductance</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>microsiemensPerCentimeter</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.97</minimum>
+                  <maximum exclusive="false">10261</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>o2_mgL</attributeName>
+          <attributeDefinition>Oxygen concentration</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>milligramsPerLiter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">91</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>o2_percent</attributeName>
+          <attributeDefinition>percent dissolved oxygen saturation</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">191</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>696</numberOfRecords>
+    </dataTable>
+  </dataset>
+  <additionalMetadata>
+    <metadata>
+      <unitList>
+        <unit id="micromolesPerMeterSquaredPerSecond" multiplierToSI="1000000" name="micromolesPerMeterSquaredPerSecond" parentSI="molesPerMeterSquaredPerSecond" unitType="arealAmountOfSubstanceConcentrationRate">
+          <description/>
+        </unit>
+        <unit id="molesPerMeterSquaredPerSecond" multiplierToSI="1" name="molesPerMeterSquaredPerSecond" parentSI="molesPerMeterSquaredPerSecond" unitType="arealAmountOfSubstanceConcentrationRate">
+          <description>unknown</description>
+        </unit>
+        <unit id="micromolesPerMole" multiplierToSI="unknown" name="micromolesPerMole" parentSI="" unitType="unknown">
+          <description>unknown</description>
+        </unit>
+        <unit id="millimolesPerMeterSquarePerSecond" multiplierToSI="unknown" name="millimolesPerMeterSquarePerSecond" parentSI="molesPerMeterSquaredPerSecond" unitType="arealAmountOfSubstanceConcentrationRate">
+          <description>unknown</description>
+        </unit>
+        <unit id="micromolesPerSecond" multiplierToSI="unknown" name="micromolesPerSecond" parentSI="molePerSecond" unitType="mole flow rate">
+          <description>unknown</description>
+        </unit>
+        <unit id="microsiemens" multiplierToSI="1.0E-6" name="microsiemens" parentSI="siemens" unitType="electrical conductance">
+          <description>microsiemens is equivalent to 1.0E-6 siemens, the SI derived unit of electric conductance equal to inverse ohm</description>
+        </unit>
+        <unit id="microsiemensPerCentimeter" multiplierToSI="0.0001" name="microsiemensPerCentimeter" parentSI="siemensPerMeter" unitType="electrical conductance per length">
+          <description>derivative of the standard SI unit of electrical conductance (specific conductance)</description>
+        </unit>
+      </unitList>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>
