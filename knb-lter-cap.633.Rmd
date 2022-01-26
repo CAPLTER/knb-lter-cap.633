@@ -1,5 +1,5 @@
 ---
-title: "capeml template"
+title: "knb-lter-cap.633"
 author: "information manager"
 date: Sys.Date()
 output: html_document
@@ -7,33 +7,24 @@ editor_options:
   chunk_output_type: console
 ---
 
-# libraries
-
-```{r libraries}
-library(EML)
-library(tidyverse)
-library(capeml)
-library(gioseml)
-library(yaml)
-```
-recodeTransect: function to standardize tsect names, these will be passed to
-the tibble flow for each datasets. Input is a string or vector of strings (from
-Tibble), output is a string or vector of strings standarized to (1) upper-case
-alpha, (2) trimmed of white space, (3) underscore separating each meaningful
-characters.
+recodeTransect: A helper function to standardize tsect names, these will be
+passed to the tibble flow for each datasets. Input is a string or vector of
+strings (from Tibble), output is a string or vector of strings standarized to
+(1) upper-case alpha, (2) trimmed of white space, (3) underscore separating
+each meaningful characters.
 
 ```{r tsect-recode, eval=TRUE}
 
 recodeTransect <- function(unformatted_tsect) {
 
   # uppercase and trim white space
-  trimmed <- toupper(str_trim(unformatted_tsect, side = c("both")))
+  trimmed <- toupper(stringr::str_trim(unformatted_tsect, side = c("both")))
 
   # remove any existing character separators
   separator <- gsub("-|:| ", "", trimmed)
 
   # convert all tsets to format char_char
-  nosep <- gsub("_", "", separator)
+  nosep      <- gsub("_", "", separator)
   underscore <- gsub("(.)\\B", "\\1_", nosep)
 
   # return standardized tsect
@@ -47,43 +38,55 @@ recodeTransect <- function(unformatted_tsect) {
 
 ```{r typha-leaves, eval=TRUE}
 
-primary_productivity <- read_csv("raw_data/tr_agpp_data.csv")
+primary_productivity <- readr::read_csv(
+  file = "raw_data/tr_agpp_data.csv",
+  show_col_types = FALSE
+)
 
-primary_productivity[primary_productivity == ""] <- NA
-
-primary_productivity <- primary_productivity %>%
-  mutate(
-    date = as.POSIXct(date, format = "%m/%d/%y"),
-    date = format(date, "%Y-%m-%d"),
-    transect = recodeTransect(transect),
-    species = as.factor(species),
-    plant_id = seq_along(date),
+primary_productivity <- primary_productivity |>
+  dplyr::mutate(
+    date         = as.Date(date, format = "%m/%d/%y"),
+    transect     = recodeTransect(transect),
+    species      = as.factor(species),
+    plant_id     = seq_along(date),
     data_book_ID = as.character(`data book ID`),
-    quadrat = as.character(quadrat),
-    species = replace(species, species == "s_cal", "s_californicus")
+    quadrat      = as.character(quadrat),
+    species      = replace(species, species == "s_cal", "s_californicus")
   )
+
+dplyr::glimpse(primary_productivity)
 
 # typha
 
-typha_leaves <- primary_productivity %>%
-  select(date:species, plant_id, data_book_ID, Notes, starts_with("leaf")) %>%
-  gather(key = "leaf_num", value = "leaf_length", starts_with("leaf")) %>%
-  filter(!is.na(leaf_length)) %>%
-  mutate(
-    plant_id = as.character(plant_id),
+typha_leaves <- primary_productivity |>
+  dplyr::select(
+    date:species,
+    plant_id,
+    data_book_ID,
+    Notes,
+    starts_with("leaf")
+    ) |>
+  tidyr::gather(key = "leaf_num", value = "leaf_length", starts_with("leaf")) |>
+  dplyr::filter(!is.na(leaf_length)) |>
+  dplyr::arrange(plant_id) |>
+  dplyr::mutate(
+    plant_id    = as.character(plant_id),
     leaf_length = as.numeric(leaf_length)
-    ) %>%
-  arrange(plant_id) %>%
-  as.data.frame
+  )
 
-# write_attributes(typha_leaves)
-# write_factors(typha_leaves)
+dplyr::glimpse(typha_leaves)
+
+try({
+  capeml::write_attributes(typha_leaves, overwrite = FALSE)
+  capeml::write_factors(typha_leaves, overwrite = FALSE)
+})
 
 typha_leaves_desc <- "Tres Rios: indices of primary productivity. Measurements of lenghts of Typha spp. leaves located within study transects at the Tres Rios wetlands. These data are used as inputs into biomass models to calculate above-ground primary productivity"
 
-typha_leaves_DT <- create_dataTable(
-  dfname = typha_leaves,
-  description = typha_leaves_desc
+typha_leaves_DT <- capeml::create_dataTable(
+  dfname         = typha_leaves,
+  description    = typha_leaves_desc,
+  dateRangeField = "date"
 )
 
 ```
@@ -92,25 +95,29 @@ typha_leaves_DT <- create_dataTable(
 
 ```{r plant-attributes, eval=TRUE}
 
-plant_attributes <- primary_productivity %>%
-  select(-starts_with("leaf")) %>%
-  arrange(plant_id) %>%
-  mutate(
+plant_attributes <- primary_productivity |>
+  dplyr::select(-starts_with("leaf")) |>
+  dplyr::arrange(plant_id) |>
+  dplyr::mutate(
     plant_id = as.character(plant_id),
     `data book ID` = as.character(`data book ID`)
-    ) %>%
-  select(date:species, plant_id, cdb:Notes) %>%
-  rename(data_book_ID = `data book ID`) %>%
-  as.data.frame()
+    ) |>
+  dplyr::select(date:species, plant_id, cdb:Notes) |>
+  dplyr::rename(data_book_ID = `data book ID`)
 
-# write_attributes(plant_attributes)
-# write_factors(plant_attributes)
+dplyr::glimpse(plant_attributes)
+
+try({
+  capeml::write_attributes(plant_attributes, overwrite = FALSE)
+  capeml::write_factors(plant_attributes, overwrite = FALSE)
+})
 
 plant_attributes_desc <- "Tres Rios: indices of primary productivity. Measurements of various physiological characteristics of individual plants located within study transects at the Tres Rios wetlands. These data are used as inputs into biomass models to calculate above-ground primary productivity."
 
-plant_attributes_DT <- create_dataTable(
-  dfname = plant_attributes,
-  description = plant_attributes_desc
+plant_attributes_DT <- capeml::create_dataTable(
+  dfname         = plant_attributes,
+  description    = plant_attributes_desc,
+  dateRangeField = "date"
 )
 
 ```
@@ -119,14 +126,17 @@ plant_attributes_DT <- create_dataTable(
 
 ```{r transpiration, eval=TRUE}
 
-transpiration <- read_csv("raw_data/tr_irga_fielddata.csv")
+transpiration <- readr::read_csv(
+  file           = "raw_data/tr_irga_fielddata.csv",
+  show_col_types = FALSE
+)
 
-transpiration[transpiration == ""] <- NA
+dplyr::glimpse(transpiration)
 
-transpiration <- transpiration %>%
-  mutate(
+transpiration <- transpiration |>
+  dplyr::mutate(
     date_time = as.POSIXct(paste(date, time), format = "%m/%d/%y %H:%M:%S"),
-    transect = case_when(
+    transect = dplyr::case_when(
       transect == "boardwalk" ~ "boardwalk",
       transect != "boardwalk" ~ recodeTransect(transect)
       ),
@@ -144,19 +154,22 @@ transpiration <- transpiration %>%
     plant_spp = replace(plant_spp, plant_spp == "hyb", "h_umbellate"),
     plant_spp = replace(plant_spp, plant_spp == "tlat", "typha"),
     plant_spp = as.factor(plant_spp)
-    ) %>%
-filter(!is.na(date_time)) %>%
-rename(species = plant_spp) %>%
-select(date_time, obs_num:VpdA) %>%
-as.data.frame()
+    ) |>
+dplyr::filter(!is.na(date_time)) |>
+dplyr::rename(species = plant_spp) |>
+dplyr::select(date_time, obs_num:VpdA)
 
-# write_attributes(transpiration)
-# write_factors(transpiration)
+dplyr::glimpse(transpiration)
+
+try({
+  capeml::write_attributes(transpiration, overwrite = FALSE)
+  capeml::write_factors(transpiration, overwrite = FALSE)
+})
 
 transpiration_desc <- "Tres Rios: transpiration. Measurements of leaf-level gas exchange and micro-climate taken using an infrared gas analyzer on individual plant leaves located within study transects at the Tres Rios wetlands. These instantaneous micro-climate and transpiration data are used as inputs into transpiration and evaporation models that scale these data and estimate whole-system atmospheric water losses."
 
-transpiration_DT <- create_dataTable(
-  dfname = transpiration,
+transpiration_DT <- capeml::create_dataTable(
+  dfname      = transpiration,
   description = transpiration_desc
 )
 
@@ -166,31 +179,39 @@ transpiration_DT <- create_dataTable(
 
 ```{r water-quality, eval=TRUE}
 
-water_quality <- read_csv("raw_data/tr_waterquality_fielddata.csv")
+water_quality <- readr::read_csv(
+  file           = "raw_data/tr_waterquality_fielddata.csv",
+  show_col_types = FALSE
+)
 
-water_quality[water_quality == ""] <- NA
+dplyr::glimpse(water_quality)
 
-water_quality <- water_quality %>%
-  mutate(
-    date = as.POSIXct(date, format = "%m/%d/%y"),
-    date = format(date, "%Y-%m-%d"),
-    transect = case_when(
+water_quality <- water_quality |>
+  dplyr::mutate(
+    date     = as.Date(date, format = "%m/%d/%y"),
+    transect = dplyr::case_when(
       grepl("m", transect) ~ recodeTransect(transect),
       transect != "m_1_e|m_4_n|m_4_s" ~ transect
-    ),
+      ),
     location = as.factor(location)
-  ) %>%
-  select(-sample_id, -doc_id) %>%
-  as.data.frame()
+    ) |>
+  dplyr::select(
+    -sample_id,
+    -doc_id
+  ) |>
+  dplyr::filter(!is.na(date))
 
-# write_attributes(water_quality)
-# write_factors(water_quality)
+try({
+  capeml::write_attributes(water_quality, overwrite = FALSE)
+  capeml::write_factors(water_quality, overwrite = FALSE)
+})
 
 water_quality_desc <- "Tres Rios: water_quality. Measurements of water quality taken in situ and from grab samples collected within study transects at the Tres Rios wetlands."
 
-water_quality_DT <- create_dataTable(
-  dfname = water_quality,
-  description = water_quality_desc
+water_quality_DT <- capeml::create_dataTable(
+  dfname         = water_quality,
+  description    = water_quality_desc,
+  dateRangeField = "date"
 )
 
 ```
@@ -203,41 +224,62 @@ See the gioseml package for examples of creating people resources from scratch.
 
 # creator(s) - required
 
-dan <- create_role(
+dan <- gioseml::create_role(
   firstName = "d",
-  lastName = "childers",
-  roleType = "creator")
-dax <- create_role(
+  lastName  = "childers",
+  roleType  = "creator"
+)
+
+dax <- gioseml::create_role(
   giosPersonId = 31196,
-  roleType = "creator")
+  roleType     = "creator"
+)
 
 creators <- list(dan, dax)
 
 # metadata provider - required
 
-chris <- create_role(
+chris <- gioseml::create_role(
   giosPersonId = 16181,
-  roleType = "metadata")
-dax <- create_role(
-  giosPersonId = 31196,
-  roleType = "metadata")
+  roleType     = "metadata"
+)
 
-metadataProvider <- list(chris, dax)
+dax <- gioseml::create_role(
+  giosPersonId = 31196,
+  roleType     = "metadata"
+)
+
+julia <- gioseml::create_role(
+  giosPersonId = 36428,
+  roleType     = "metadata"
+)
+
+metadataProvider <- list(
+  chris,
+  dax,
+  julia
+)
 
 # associated party - optional
 
 # takes the optional argument `projectRole` (default: "former project
 # associate")
 
-chris <- create_role(
+chris <- gioseml::create_role(
   giosPersonId = 16181,
-  roleType = "associated")
-nich <- create_role(
-  firstName = "n",
-  lastName = "weller",
-  roleType = "associated")
+  roleType     = "associated"
+)
 
-associatedParty <- list(chris, nich)
+nich <- gioseml::create_role(
+  firstName = "n",
+  lastName  = "weller",
+  roleType  = "associated"
+)
+
+associatedParty <- list(
+  chris,
+  nich
+)
 
 ```
 
@@ -248,7 +290,7 @@ associatedParty <- list(chris, nich)
 # CAP IRTs for reference (be sure to include these as appropriate):
 # https://sustainability.asu.edu/caplter/research/
 
-write_keywords()
+capeml::write_keywords()
 ```
 
 # coverages
@@ -256,69 +298,89 @@ write_keywords()
 ```{r coverages}
 
 begindate <- as.character(min(
-  min(primary_productivity$date),
-  min(water_quality$date)
+  min(primary_productivity$date, na.rm = TRUE),
+  min(water_quality$date, na.rm = TRUE)
 ))
 
 enddate <- as.character(max(
-  max(primary_productivity$date),
-  max(water_quality$date)
+  max(primary_productivity$date, na.rm = TRUE),
+  max(water_quality$date, na.rm = TRUE)
 ))
 
-geographicDescription <- "CAP LTER study area"
+coverage <- EML::set_coverage(
+  begin                 = begindate,
+  end                   = enddate,
+  geographicDescription = yaml::yaml.load_file("config.yaml")$geographicCoverage,
+  west                  = -112.266838,
+  east                  = -112.261501,
+  north                 = +33.398637,
+  south                 = +33.388571
+)
 
-coverage <- set_coverage(
-  begin = begindate,
-  end = enddate,
-  geographicDescription = geographicDescription,
-  west = -111.949, east = -111.910,
-  north = +33.437, south = +33.430)
+# Northern:  	33.398637	Southern:  	33.388571
+# Western:  	-112.266838	Eastern:  	-112.261501
 
 ```
 
 ## taxonomic coverage
 
-Taxonomic coverage(s) are constructed using EDI's taxonomyCleanr tool suite.
-
-*Note* that the `taxa_map.csv` built with the `create_taxa_map()` function and
-resolving taxonomic IDs (i.e., `resolve_comm_taxa()`) only needs to be run once,
-a potentially long process, per version/session -- the taxonomicCoverage can be
-built as many times as needed with `resolve_comm_taxa()` once the `taxa_map.csv`
-has been generated and the taxonomic IDs resolved.
-
 ```{r taxonomyCleanr, eval=FALSE}
 
-library(taxonomyCleanr)
-
-my_path <- getwd() # taxonomyCleanr requires a path (to build the taxa_map)
+my_path <- getwd()
 
 # plant taxa listed in the om_transpiration_factors file
 
-plantTaxa <- rbind(
-  read_csv("plant_attributes_factors.csv"),
-  read_csv("transpiration_factors.csv"),
-  read_csv("typha_leaves_factors.csv")
-  ) %>%
-distinct(definition) %>%
+plant_taxa <- rbind(
+  readr::read_csv("archive/plant_attributes_factors.csv", show_col_types = FALSE),
+  readr::read_csv("archive/transpiration_factors.csv", show_col_types = FALSE),
+  readr::read_csv("archive/typha_leaves_factors.csv", show_col_types = FALSE)
+  ) |>
+dplyr::filter(!grepl("OR", definition, ignore.case = FALSE)) |>
+dplyr::distinct(definition) |>
 as.data.frame()
 
 # create or update map. A taxa_map.csv is the heart of taxonomyCleanr. This
 # function will build the taxa_map.csv and put it in the path identified with
 # my_path.
-create_taxa_map(path = my_path, x = plantTaxa, col = "definition")
+
+taxonomyCleanr::create_taxa_map(
+  path = my_path,
+  x    = plant_taxa,
+  col  = "definition"
+)
 
 # Resolve taxa by attempting to match the taxon name (data.source 3 is ITIS but
 # other sources are accessible). Use `resolve_comm_taxa` instead of
 # `resolve_sci_taxa` if taxa names are common names but note that ITIS
 # (data.source 3) is the only authority taxonomyCleanr will allow for common
 # names.
-resolve_sci_taxa(path = my_path, data.sources = 3) # in this case, 3 is ITIS
+
+taxonomyCleanr::resolve_sci_taxa(
+  path         = my_path,
+  data.sources = 3
+)
 
 # build the EML taxonomomic coverage
-taxaCoverage <- make_taxonomicCoverage(path = my_path)
+taxaCoverage <- taxonomyCleanr::make_taxonomicCoverage(path = my_path)
 
 # add taxonomic to the other coverages
 coverage$taxonomicCoverage <- taxaCoverage
+```
+
+# literature-cited
+
+```{r literature-cited, eval=TRUE}
+
+pub1 <- capeml::create_citation("https://doi.org/10.1016/j.ecoleng.2016.01.002")
+pub2 <- capeml::create_citation("https://doi.org/10.1016/j.ecoleng.2015.05.044")
+
+citations <- list(
+  citation = list(
+    pub1,
+    pub2
+  ) # close list of citations
+) # close citation
+
 ```
 
 # dataset
@@ -328,95 +390,88 @@ Projects scopes include lter (default), urex, ltreb, and som.
 
 ```{r construct-dataset}
 
-dataset <- create_dataset()
+dataset <- capeml::create_dataset()
 ```
-
-# add dataTable
-
-```{r dataSet$dataTable}
-
-# add dataTables if relevant
-
-print(ls(pattern = "_DT"))
-
-if (length(ls(pattern = "_DT")) > 0) {
-
-  listOfDataTables <- lapply(ls(pattern = "_DT"), function(DT) { get(DT) } )
-
-  dataset$dataTable  <- listOfDataTables
-
-}
-
-# or add manually
-# dataset$dataTable <- list(dataTableOne, dataTableTwo)
-
-```
-
 
 # customUnits
 
 ```{r custom-units, eval=FALSE}
 
 custom_units <- rbind(
-  data.frame(id = "micromolesPerMeterSquaredPerSecond",
-    parentSI = "molesPerMeterSquaredPerSecond",
-    unitType = "arealAmountOfSubstanceConcentrationRate",
+  data.frame(
+    id             = "micromolesPerMeterSquaredPerSecond",
+    parentSI       = "molesPerMeterSquaredPerSecond",
+    unitType       = "arealAmountOfSubstanceConcentrationRate",
     multiplierToSI = "1000000",
-    description = ""),
-  data.frame(id = "molesPerMeterSquaredPerSecond",
-    parentSI = "molesPerMeterSquaredPerSecond",
-    unitType = "arealAmountOfSubstanceConcentrationRate",
+    description    = ""
+    ),
+  data.frame(
+    id             = "molesPerMeterSquaredPerSecond",
+    parentSI       = "molesPerMeterSquaredPerSecond",
+    unitType       = "arealAmountOfSubstanceConcentrationRate",
     multiplierToSI = "1",
-    description = "unknown"),
-  data.frame(id = "micromolesPerMole",
-    parentSI = "",
-    unitType = "unknown",
+    description    = "unknown"
+    ),
+  data.frame(
+    id             = "micromolesPerMole",
+    parentSI       = "",
+    unitType       = "unknown",
     multiplierToSI = "unknown",
-    description = "unknown"),
-  data.frame(id = "millimolesPerMeterSquarePerSecond",
-    parentSI = "molesPerMeterSquaredPerSecond",
-    unitType = "arealAmountOfSubstanceConcentrationRate",
+    description    = "unknown"
+    ),
+  data.frame(
+    id             = "millimolesPerMeterSquarePerSecond",
+    parentSI       = "molesPerMeterSquaredPerSecond",
+    unitType       = "arealAmountOfSubstanceConcentrationRate",
     multiplierToSI = "unknown",
-    description = "unknown"),
-  data.frame(id = "micromolesPerSecond",
-    parentSI = "molePerSecond",
-    unitType = "mole flow rate",
+    description    = "unknown"
+    ),
+  data.frame(
+    id             = "micromolesPerSecond",
+    parentSI       = "molePerSecond",
+    unitType       = "mole flow rate",
     multiplierToSI = "unknown",
-    description = "unknown"),
-  data.frame(id = "microsiemens",
-    parentSI = "siemens",
-    unitType = "electrical conductance",
+    description    = "unknown"
+    ),
+  data.frame(
+    id             = "microsiemens",
+    parentSI       = "siemens",
+    unitType       = "electrical conductance",
     multiplierToSI = "1.0E-6",
-    description = "microsiemens is equivalent to 1.0E-6 siemens, the SI derived unit of electric conductance equal to inverse ohm"),
-  data.frame(id = "microsiemensPerCentimeter",
-    parentSI = "siemensPerMeter",
-    unitType = "electrical conductance per length",
+    description    = "microsiemens is equivalent to 1.0E-6 siemens, the SI derived unit of electric conductance equal to inverse ohm"
+    ),
+  data.frame(
+    id             = "microsiemensPerCentimeter",
+    parentSI       = "siemensPerMeter",
+    unitType       = "electrical conductance per length",
     multiplierToSI = "0.0001",
-    description = "derivative of the standard SI unit of electrical conductance (specific conductance)")
+    description    = "derivative of the standard SI unit of electrical conductance (specific conductance)"
+  )
 )
 
-unitList <- set_unitList(
-  custom_units,
-  as_metadata = TRUE)
+unitList <- EML::set_unitList(
+  units       = custom_units,
+  as_metadata = TRUE
+)
 
 ```
 
 # eml
 
-```{r construct_eml, eval=TRUE}
+```{r construct-eml, eval=TRUE}
 
-eml <- create_eml()
+eml <- capeml::create_eml()
 ```
 
-```{r validate_eml, eval=TRUE}
+```{r validate-eml, eval=TRUE}
 
-eml_validate(eml)
+EML::eml_validate(eml)
 ```
 
-```{r eml_to_file, eval=TRUE}
+```{r eml-to-file, eval=TRUE}
 
 # write the eml to file
-write_cap_eml()
+capeml::write_cap_eml()
 ```
 
 # file placement
@@ -428,10 +483,10 @@ if (!file.exists("config.yaml")) {
   stop("config.yaml not found")
 }
 packageIdent <- yaml::yaml.load_file("config.yaml")$packageIdent
-packageNum <- yaml::yaml.load_file("config.yaml")$packageNum
+packageNum   <- yaml::yaml.load_file("config.yaml")$packageNum
 ```
 
-```{r preview_data_file_to_upload}
+```{r preview-data-file-to-upload}
 
 # preview data set files that will be uploaded to S3
 list.files(pattern = paste0(packageNum, "_"))
@@ -439,44 +494,102 @@ list.files(pattern = paste0(packageNum, "_"))
 
 Move data and final xml files to respective ASU locations.
 
-```{r S3_helper_functions}
+```{r S3-helper-functions}
+
 # functions and setting for uploading to S3
 library(aws.s3)
 source("~/Documents/localSettings/aws.s3")
 ```
 
-```{r upload_data_S3}
+```{r upload-data-S3}
 
 # upload files to S3
-lapply(list.files(pattern = paste0(packageNum, "_")), data_to_amz)
+lapply(list.files(pattern = paste0(packageNum, "_")), gioseml::data_to_amz)
 ```
 
-```{r clean_up}
+```{r clean-up}
 
 # remove data files
 dataFilesToRemove <- dir(pattern = paste0(packageNum, "_"))
 file.remove(dataFilesToRemove)
 
 # EML to S3
-if(length(list.files(pattern = "*.xml")) == 1) {
-  eml_to_amz(list.files(pattern = "*.xml")) } else {
-    print("more than one xml file found")
-  }
+gioseml::eml_to_amz(paste0(packageIdent, ".xml"))
 
 # EML to cap-data-eml and remove file from project
-tryCatch({
-  
-  if(length(list.files(pattern = "*.xml")) == 1) {
-    file.copy(list.files(pattern = "*.xml"), "/home/srearl/localRepos/cap-metadata/cap-data-eml/")
-    file.remove(list.files(pattern = "*.xml")) } else {
-      print("more than one xml file found")
-    }
-},
-warning = function(warn) {
-  print(paste("WARNING: ", warn))
-},
-error = function(err) {
-  print(paste("ERROR: ", err))
-  
-}) # close try catch
+file.copy(
+  from = paste0(packageIdent, ".xml"),
+  to   = "/home/srearl/localRepos/cap-metadata/cap-data-eml/"
+)
+file.remove(paste0(packageIdent, ".xml"))
+
+```
+
+# EDI
+
+## EDI: login
+
+```{r edi-login, eval=TRUE, echo=TRUE, message=TRUE}
+
+EDIutils::login(
+  userId   = keyring::key_get("edi_user"),
+  userPass = keyring::key_get("edi_pass")
+)
+
+```
+
+## EDI: evaluate
+
+```{r edi-evaluate, eval=TRUE, echo=TRUE, message=TRUE}
+
+evaluation <- EDIutils::evaluate_data_package(
+  eml         = paste0(packageIdent, ".xml"),
+  useChecksum = FALSE,
+  env         = "production"
+)
+
+Sys.sleep(8)
+
+eval_status <- EDIutils::check_status_evaluate(
+  transaction = evaluation,
+  env         = "production"
+)
+
+if (eval_status) {
+
+  # evalution summary
+
+  EDIutils::read_evaluate_report_summary(
+    transaction = evaluation,
+    env         = "production"
+  )
+
+}
+
+# evalution detailed
+
+# EDIutils::read_evaluate_report(
+#   transaction = evaluation,
+#   env         = "production"
+# )
+
+```
+
+## EDI: update
+
+```{r edi-update, eval=TRUE, echo=TRUE, message=TRUE}
+
+EDIutils::update_data_package(
+  eml         = paste0(packageIdent, ".xml"),
+  env         = "production"
+)
+
+```
+
+## EDI: logout
+
+```{r edi-logout, eval=TRUE, echo=TRUE, message=TRUE}
+
+EDIutils::logout()
+
 ```

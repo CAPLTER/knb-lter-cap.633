@@ -1,0 +1,75 @@
+|
+  date:
+    attributeName: date
+    attributeDefinition: 'date of observation'
+    columnClasses: Date
+    formatString: YYYY-MM-DD
+  transect:
+    attributeName: transect
+    attributeDefinition: 'transect ID'
+    columnClasses: character
+    definition: ''
+  quadrat:
+    attributeName: quadrat
+    attributeDefinition: 'location of quadrat along transect'
+    columnClasses: character
+    definition: ''
+  species:
+    attributeName: species
+    attributeDefinition: 'plant species'
+    columnClasses: factor
+  plant_id:
+    attributeName: plant_id
+    attributeDefinition: 'plant id (for linking to Typha leaves data)'
+    columnClasses: character
+    definition: ''
+  cdb:
+    attributeName: cdb
+    attributeDefinition: 'Culm diameter of plant stem taken at water surface'
+    unit: 'centimeter'
+    numberType: real
+    minimum: 0.0
+    maximum: 7037.0
+    columnClasses: numeric
+  stem_height:
+    attributeName: stem_height
+    attributeDefinition: 'Height of plant stem (Schoenoplectus spp. only)'
+    unit: 'centimeter'
+    numberType: real
+    minimum: 0.0
+    maximum: 1276.0
+    columnClasses: numeric
+  num_seed_stems:
+    attributeName: num_seed_stems
+    attributeDefinition: 'Count of seed steams at plant tip (Schoenoplectus spp. only)'
+    unit: 'number'
+    numberType: whole
+    minimum: 0.0
+    maximum: 208.0
+    columnClasses: numeric
+  pistillate_length:
+    attributeName: pistillate_length
+    attributeDefinition: 'Length of pistillate (if present; Typha spp. only)'
+    unit: 'centimeter'
+    numberType: real
+    minimum: 0.0
+    maximum: 347.0
+    columnClasses: numeric
+  pistillate_width:
+    attributeName: pistillate_width
+    attributeDefinition: 'Width of pistillate (if present; Typha spp. only)'
+    unit: 'centimeter'
+    numberType: real
+    minimum: 0.0
+    maximum: 202.0
+    columnClasses: numeric
+  data_book_ID:
+    attributeName: data_book_ID
+    attributeDefinition: 'field data book ID'
+    columnClasses: character
+    definition: ''
+  Notes:
+    attributeName: Notes
+    attributeDefinition: 'notes'
+    columnClasses: character
+    definition: ''

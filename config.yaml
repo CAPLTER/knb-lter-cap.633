@@ -1,3 +1,8 @@
 packageNum: 633
-packageIdent: knb-lter-cap.633.3
-title: Long-term monitoring and research of the ecology of the Tres Rios constructed treatment wetland, Phoenix, AZ, ongoing since 2011
+packageIdent: knb-lter-cap.633.4
+baseURL: https://data.gios.asu.edu/datasets/cap/
+project: lter
+title: 'Long-term monitoring and research of the ecology of the Tres Rios constructed treatment wetland, Phoenix, Arizona, USA, ongoing since 2011'
+maintenance: regular
+geographicCoverage:
+  geographicDescription: "Tres Rios constructed wetlands of the Tres Rios wastewater treatment complex in the Phoenix, Arizona (USA) metropolitan area"

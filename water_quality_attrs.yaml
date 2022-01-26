@@ -1,0 +1,135 @@
+|
+  date:
+    attributeName: date
+    attributeDefinition: 'date of observation'
+    columnClasses: Date
+    formatString: YYYY-MM-DD
+  transect:
+    attributeName: transect
+    attributeDefinition: 'transect ID'
+    columnClasses: character
+    definition: ''
+  location:
+    attributeName: location
+    attributeDefinition: 'Location where sample was taken within transect'
+    columnClasses: factor
+  tp_mgL:
+    attributeName: tp_mgL
+    attributeDefinition: 'Total phosphorus concentration'
+    unit: 'milligramsPerLiter'
+    numberType: real
+    minimum: 1.558
+    maximum: 5.44
+    columnClasses: numeric
+  tn_mgL:
+    attributeName: tn_mgL
+    attributeDefinition: 'Total nitrogen concentration'
+    unit: 'milligramsPerLiter'
+    numberType: real
+    minimum: 0.5549
+    maximum: 13.776
+    columnClasses: numeric
+  doc_mgL:
+    attributeName: doc_mgL
+    attributeDefinition: 'Dissolved organic carbon concentration'
+    unit: 'milligramsPerLiter'
+    numberType: real
+    minimum: 5.203
+    maximum: 101.1
+    columnClasses: numeric
+  tdn_mgL:
+    attributeName: tdn_mgL
+    attributeDefinition: 'Total dissolved nitrogen concentration'
+    unit: 'milligramsPerLiter'
+    numberType: real
+    minimum: 0.8269
+    maximum: 9.963
+    columnClasses: numeric
+  no3_mgL:
+    attributeName: no3_mgL
+    attributeDefinition: 'nitrate-nitrogen (NO3-N)'
+    unit: 'milligramsPerLiter'
+    numberType: real
+    minimum: -0.113
+    maximum: 8.3
+    columnClasses: numeric
+  no2_mgL:
+    attributeName: no2_mgL
+    attributeDefinition: 'nitrite-nitrogen (NO2-N)'
+    unit: 'milligramsPerLiter'
+    numberType: real
+    minimum: -0.0109
+    maximum: 4.05
+    columnClasses: numeric
+  nh4_mgL:
+    attributeName: nh4_mgL
+    attributeDefinition: 'ammonium-nitrogen (NH4-N)'
+    unit: 'milligramsPerLiter'
+    numberType: real
+    minimum: -0.0491
+    maximum: 3.42
+    columnClasses: numeric
+  cl_mgL:
+    attributeName: cl_mgL
+    attributeDefinition: 'chloride (Cl)'
+    unit: 'milligramsPerLiter'
+    numberType: real
+    minimum: 0.116
+    maximum: 4720.0
+    columnClasses: numeric
+  po4_ugL:
+    attributeName: po4_ugL
+    attributeDefinition: 'phosphate-phosphorus (PO4-P)'
+    unit: 'milligramsPerLiter'
+    numberType: real
+    minimum: -17900.0
+    maximum: 4230.0
+    columnClasses: numeric
+  ph:
+    attributeName: ph
+    attributeDefinition: 'pH'
+    unit: 'dimensionless'
+    numberType: real
+    minimum: 3.4
+    maximum: 8.91
+    columnClasses: numeric
+  temperature_c:
+    attributeName: temperature_c
+    attributeDefinition: 'Water temperature'
+    unit: 'celsius'
+    numberType: real
+    minimum: 4.1
+    maximum: 32.1
+    columnClasses: numeric
+  conductance_us:
+    attributeName: conductance_us
+    attributeDefinition: 'Conductance'
+    unit: 'microsiemens'
+    numberType: real
+    minimum: 0.0096
+    maximum: 6285.0
+    columnClasses: numeric
+  spec_cond_us:
+    attributeName: spec_cond_us
+    attributeDefinition: 'Specific conductance'
+    unit: 'microsiemensPerCentimeter'
+    numberType: real
+    minimum: 0.0092
+    maximum: 10261.0
+    columnClasses: numeric
+  o2_mgL:
+    attributeName: o2_mgL
+    attributeDefinition: 'Oxygen concentration'
+    unit: 'milligramsPerLiter'
+    numberType: real
+    minimum: 0.0
+    maximum: 91.0
+    columnClasses: numeric
+  o2_percent:
+    attributeName: o2_percent
+    attributeDefinition: 'percent dissolved oxygen saturation'
+    unit: 'percent'
+    numberType: real
+    minimum: 0.0
+    maximum: 191.0
+    columnClasses: numeric

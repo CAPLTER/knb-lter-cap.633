@@ -1,0 +1,201 @@
+|
+  date_time:
+    attributeName: date_time
+    attributeDefinition: 'date and time of observation'
+    columnClasses: Date
+    formatString: YYYY-MM-DD hh:mm:ss
+  obs_num:
+    attributeName: obs_num
+    attributeDefinition: 'Sequential order in which samples were taken on a given day'
+    columnClasses: character
+    definition: ''
+  transect:
+    attributeName: transect
+    attributeDefinition: 'transect ID'
+    columnClasses: character
+    definition: ''
+  species:
+    attributeName: species
+    attributeDefinition: 'plant species'
+    columnClasses: factor
+  section:
+    attributeName: section
+    attributeDefinition: 'Vertical location along plant where measurement was taken: T = tip of leaf or stem; B = bottom of leaf or stem. Integers represent total distance (cm) above water surface.'
+    columnClasses: character
+    definition: ''
+  photo:
+    attributeName: photo
+    attributeDefinition: 'Rate of photosynthesis'
+    unit: 'micromolesPerMeterSquaredPerSecond'
+    numberType: real
+    minimum: -2867.231611
+    maximum: 615.9774782
+    columnClasses: numeric
+  cond:
+    attributeName: cond
+    attributeDefinition: 'Conductance to H2O'
+    unit: 'molesPerMeterSquaredPerSecond'
+    numberType: real
+    minimum: -1117.051062
+    maximum: 1637.942186
+    columnClasses: numeric
+  ci:
+    attributeName: ci
+    attributeDefinition: 'Intercellular CO2 concentration'
+    unit: 'micromolesPerMole'
+    numberType: real
+    minimum: -233137.3812
+    maximum: 56294.53615
+    columnClasses: numeric
+  trmmol:
+    attributeName: trmmol
+    attributeDefinition: 'Transpiration rate'
+    unit: 'micromolesPerMole'
+    numberType: real
+    minimum: -21.3786853
+    maximum: 78.6249493
+    columnClasses: numeric
+  VpdL:
+    attributeName: VpdL
+    attributeDefinition: 'Vapor pressure deficit based on Leaf temperature'
+    unit: 'kilopascal'
+    numberType: real
+    minimum: -0.481791
+    maximum: 32.4973668
+    columnClasses: numeric
+  Area:
+    attributeName: Area
+    attributeDefinition: 'Area of leaf surface in IRGA chamber head'
+    unit: 'micromolesPerSecond'
+    numberType: real
+    minimum: 0.5
+    maximum: 33.0
+    columnClasses: numeric
+  stm_rat:
+    attributeName: stm_rat
+    attributeDefinition: 'Stomatal ratio estimate'
+    unit: 'dimensionless'
+    numberType: natural
+    minimum: 1.0
+    maximum: 1.0
+    columnClasses: numeric
+  BLCond:
+    attributeName: BLCond
+    attributeDefinition: 'Total boundary layer conductance for the life (includes stomatal ratio)'
+    unit: 'molesPerMeterSquaredPerSecond'
+    numberType: real
+    minimum: -9.0165231
+    maximum: 5.2552177
+    columnClasses: numeric
+  Tair:
+    attributeName: Tair
+    attributeDefinition: 'Temperature in the sample cell'
+    unit: 'celsius'
+    numberType: real
+    minimum: 8.9592991
+    maximum: 48.1491318
+    columnClasses: numeric
+  Tleaf:
+    attributeName: Tleaf
+    attributeDefinition: 'Temperature of the leaf thermocouple'
+    unit: 'celsius'
+    numberType: real
+    minimum: 1.523213
+    maximum: 74.1922836
+    columnClasses: numeric
+  TBlk:
+    attributeName: TBlk
+    attributeDefinition: 'Temperature of the cooler block'
+    unit: 'celsius'
+    numberType: real
+    minimum: 9.0227203
+    maximum: 48.2547378
+    columnClasses: numeric
+  CO2R:
+    attributeName: CO2R
+    attributeDefinition: 'CO2 concentration inside the reference cell'
+    unit: 'micromolesPerMole'
+    numberType: real
+    minimum: -0.1322483
+    maximum: 2466.419678
+    columnClasses: numeric
+  CO2S:
+    attributeName: CO2S
+    attributeDefinition: 'CO2 concentration inside the sample cell'
+    unit: 'micromolesPerMole'
+    numberType: real
+    minimum: -0.0250306
+    maximum: 2416.128174
+    columnClasses: numeric
+  H2OR:
+    attributeName: H2OR
+    attributeDefinition: 'H2O concentration inside the reference cell'
+    unit: 'micromolesPerMole'
+    numberType: real
+    minimum: 0.3019181
+    maximum: 41.07864
+    columnClasses: numeric
+  H2OS:
+    attributeName: H2OS
+    attributeDefinition: 'H2O concentration inside the sample cell'
+    unit: 'micromolesPerMole'
+    numberType: real
+    minimum: 1.1626865
+    maximum: 79.275116
+    columnClasses: numeric
+  RH_R:
+    attributeName: RH_R
+    attributeDefinition: 'Relative humidity in the reference cell'
+    unit: 'dimensionless'
+    numberType: real
+    minimum: 1.8597212
+    maximum: 69.9806519
+    columnClasses: numeric
+  RH_S:
+    attributeName: RH_S
+    attributeDefinition: 'Relative humidity in the sample cell'
+    unit: 'dimensionless'
+    numberType: real
+    minimum: 6.8576293
+    maximum: 86.5265503
+    columnClasses: numeric
+  Flow:
+    attributeName: Flow
+    attributeDefinition: 'Flow rate to the sample cell'
+    unit: 'micromolesPerSecond'
+    numberType: real
+    minimum: 399.1493225
+    maximum: 501.1727295
+    columnClasses: numeric
+  PARi:
+    attributeName: PARi
+    attributeDefinition: 'Photosynthetically active radiation as measured by in-chamber'
+    unit: 'micromolesPerMeterSquaredPerSecond'
+    numberType: real
+    minimum: -1412.018311
+    maximum: 1937.74707
+    columnClasses: numeric
+  PARo:
+    attributeName: PARo
+    attributeDefinition: 'Photosynthetically active radiation as measured by external sensor'
+    unit: 'micromolesPerMeterSquaredPerSecond'
+    numberType: real
+    minimum: 0.0
+    maximum: 2050.601563
+    columnClasses: numeric
+  vp_kPa:
+    attributeName: vp_kPa
+    attributeDefinition: 'Average vapor pressure deficit'
+    unit: 'kilopascal'
+    numberType: real
+    minimum: 0.1138351
+    maximum: 7.707693
+    columnClasses: numeric
+  VpdA:
+    attributeName: VpdA
+    attributeDefinition: 'Vapor pressure deficit based on air temperature'
+    unit: 'kilopascal'
+    numberType: real
+    minimum: -0.0453689
+    maximum: 15.9391393
+    columnClasses: numeric

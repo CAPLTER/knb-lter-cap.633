@@ -1,0 +1,20 @@
+|
+  - attribute:
+      attributeName: species
+      levels:
+      - code: h_umbellate
+        definition: 'Hydroctoyle umbellate'
+      - code: s_acutus
+        definition: 'Schoenoplectus acutus'
+      - code: s_acutus_tabernaemontani
+        definition: 'Schoenoplectus acutus OR Schoenoplectus tabernaemontani'
+      - code: s_americanus
+        definition: 'Schoenoplectus americanus'
+      - code: s_californicus
+        definition: 'Schoenoplectus californicus'
+      - code: s_maritimus
+        definition: 'Schoenoplectus maritimus'
+      - code: s_tabernaemontani
+        definition: 'Schoenoplectus tabernaemontani'
+      - code: typha
+        definition: 'Typha spp.'

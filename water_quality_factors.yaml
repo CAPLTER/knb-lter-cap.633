@@ -1,0 +1,12 @@
+|
+  - attribute:
+      attributeName: location
+      levels:
+      - code: inflow
+        definition: inflow
+      - code: outflow
+        definition: outflow
+      - code: shore
+        definition: shore
+      - code: water
+        definition: water

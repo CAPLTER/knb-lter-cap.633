@@ -1,0 +1,18 @@
+|
+  - attribute:
+      attributeName: species
+      levels:
+      - code: s_acutus
+        definition: 'Schoenoplectus acutus'
+      - code: s_americanus
+        definition: 'Schoenoplectus americanus'
+      - code: s_californicus
+        definition: 'Schoenoplectus californicus'
+      - code: s_maritimus
+        definition: 'Schoenoplectus maritimus'
+      - code: s_tabernaemontani
+        definition: 'Schoenoplectus tabernaemontani'
+      - code: t_domingensis
+        definition: 'Typha domingensis'
+      - code: t_latifolia
+        definition: 'Typha latifolia'

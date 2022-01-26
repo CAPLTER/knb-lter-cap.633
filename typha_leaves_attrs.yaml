@@ -1,0 +1,48 @@
+|
+  date:
+    attributeName: date
+    attributeDefinition: 'date of observation'
+    columnClasses: Date
+    formatString: YYYY-MM-DD
+  transect:
+    attributeName: transect
+    attributeDefinition: 'transect ID'
+    columnClasses: character
+    definition: ''
+  quadrat:
+    attributeName: quadrat
+    attributeDefinition: 'location of quadrat along transect'
+    columnClasses: character
+    definition: ''
+  species:
+    attributeName: species
+    attributeDefinition: 'plant species'
+    columnClasses: factor
+  plant_id:
+    attributeName: plant_id
+    attributeDefinition: 'plant id (for linking to plant attribute data)'
+    columnClasses: character
+    definition: ''
+  data_book_ID:
+    attributeName: data_book_ID
+    attributeDefinition: 'field data book ID'
+    columnClasses: character
+    definition: ''
+  Notes:
+    attributeName: Notes
+    attributeDefinition: 'notes'
+    columnClasses: character
+    definition: ''
+  leaf_num:
+    attributeName: leaf_num
+    attributeDefinition: 'leaf ID'
+    columnClasses: character
+    definition: ''
+  leaf_length:
+    attributeName: leaf_length
+    attributeDefinition: 'length of individual plant leaf'
+    unit: 'centimeter'
+    numberType: real
+    minimum: 0.0
+    maximum: 235247.0
+    columnClasses: numeric
